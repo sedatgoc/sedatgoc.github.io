@@ -35,7 +35,8 @@
   <meta property="og:url" content="https://sedatgoc.com/blog/apache-camel-opcua-connectivity-wtih-plc4x/">
   <meta property="og:site_name" content="Sedat Goc">
   <meta property="og:title" content="OPC UA Connectivity with Apache Camel and Apache PLC4X">
-  <meta property="og:description" content="What is OPC UA and Why Should We Care? # Have you ever heard of OPC UA? Although I have been working with integration layers for many years, I had never heard of this technology until last year. To summarize about OPC UA, we can say basically it’s a standardized, secure and semantic data exchange protocol for machines, PLCs and sensors. Most manufacturers use this protocol in their PLCs and sensors. Of course, industrial systems can communicate using other protocols like Modbus, S7, ADS etc.">
+  <meta property="og:description" content="What is OPC UA and Why Should We Care? # High-level architecture of data flow from PLCs to Enterprise Systems via Apache Camel.
+Have you ever heard of OPC UA? Although I have been working with integration layers for many years, I had never heard of this technology until last year. To summarize about OPC UA, we can say basically it’s a standardized, secure and semantic data exchange protocol for machines, PLCs and sensors. Most manufacturers use this protocol in their PLCs and sensors. Of course, industrial systems can communicate using other protocols like Modbus, S7, ADS etc.">
   <meta property="og:locale" content="en_us">
   <meta property="og:type" content="article">
     <meta property="article:section" content="blog">
@@ -45,7 +46,8 @@
   
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="OPC UA Connectivity with Apache Camel and Apache PLC4X">
-  <meta name="twitter:description" content="What is OPC UA and Why Should We Care? # Have you ever heard of OPC UA? Although I have been working with integration layers for many years, I had never heard of this technology until last year. To summarize about OPC UA, we can say basically it’s a standardized, secure and semantic data exchange protocol for machines, PLCs and sensors. Most manufacturers use this protocol in their PLCs and sensors. Of course, industrial systems can communicate using other protocols like Modbus, S7, ADS etc.">
+  <meta name="twitter:description" content="What is OPC UA and Why Should We Care? # High-level architecture of data flow from PLCs to Enterprise Systems via Apache Camel.
+Have you ever heard of OPC UA? Although I have been working with integration layers for many years, I had never heard of this technology until last year. To summarize about OPC UA, we can say basically it’s a standardized, secure and semantic data exchange protocol for machines, PLCs and sensors. Most manufacturers use this protocol in their PLCs and sensors. Of course, industrial systems can communicate using other protocols like Modbus, S7, ADS etc.">
 
   
   
@@ -212,7 +214,7 @@
     
     
     "mainEntityOfPage": "true",
-    "wordCount": "1354"
+    "wordCount": "1367"
   }]
   </script>
 
@@ -545,7 +547,7 @@
   <div class="flex flex-row flex-wrap items-center">
     
     
-      <time datetime="2026-02-15T19:07:25&#43;01:00">February 15, 2026</time><span class="px-2 text-primary-500">&middot;</span><span>1354 words</span><span class="px-2 text-primary-500">&middot;</span><span title="Reading time">7 mins</span>
+      <time datetime="2026-02-15T19:07:25&#43;01:00">February 15, 2026</time><span class="px-2 text-primary-500">&middot;</span><span>1367 words</span><span class="px-2 text-primary-500">&middot;</span><span title="Reading time">7 mins</span>
     
 
     
@@ -621,7 +623,21 @@
     </span>
     
 </h3>
-<p>Have you ever heard of OPC UA? Although I have been working with integration layers for many years, I had never heard of this technology until last year. To summarize about OPC UA, we can say basically it&rsquo;s a standardized, secure and semantic data exchange protocol for machines, PLCs and sensors. Most manufacturers use this protocol in their PLCs and sensors. Of course, industrial systems can communicate using other protocols like Modbus, S7, ADS etc.</p>
+<p><figure><img
+    class="my-0 rounded-md"
+    loading="lazy"
+    decoding="async"
+    fetchpriority="auto"
+    alt="OPC UA and Apache Camel Integration Architecture"
+    width="872"
+    height="362"
+    src="/blog-content/opcua-apache-camel-connectivity-content/architecture-diagram_hu_c49d62004559c767.png"
+    srcset="/blog-content/opcua-apache-camel-connectivity-content/architecture-diagram_hu_c49d62004559c767.png 800w, /blog-content/opcua-apache-camel-connectivity-content/architecture-diagram.png 1280w"
+    sizes="(min-width: 768px) 50vw, 65vw"
+    data-zoom-src="/blog-content/opcua-apache-camel-connectivity-content/architecture-diagram.png"></figure>
+</p>
+<blockquote><p>High-level architecture of data flow from PLCs to Enterprise Systems via Apache Camel.</p>
+</blockquote><p>Have you ever heard of OPC UA? Although I have been working with integration layers for many years, I had never heard of this technology until last year. To summarize about OPC UA, we can say basically it&rsquo;s a standardized, secure and semantic data exchange protocol for machines, PLCs and sensors. Most manufacturers use this protocol in their PLCs and sensors. Of course, industrial systems can communicate using other protocols like Modbus, S7, ADS etc.</p>
 <p>I wanted to write this blog because IoT is very important today, and I want to show how to communicate with OPC UA with Apache Camel and how to use it for integration without any paid-solution.</p>
 
 <h3 class="relative group">Bridging the Gap: My Journey with Apache Camel and PLC4X
