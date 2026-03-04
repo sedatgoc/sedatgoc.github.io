@@ -1,0 +1,1238 @@
+<!doctype html>
+<html
+  lang="en-us"
+  dir="ltr"
+  class="scroll-smooth"
+  data-default-appearance="light"
+  data-auto-appearance="true"><head>
+  <meta charset="utf-8">
+  
+    <meta http-equiv="content-language" content="en-us">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="theme-color">
+
+  
+  
+    <title>Salesforce Bulk API 2.0 Integration with Apache Camel &middot; Sedat Goc</title>
+    <meta name="title" content="Salesforce Bulk API 2.0 Integration with Apache Camel &middot; Sedat Goc">
+  
+
+  
+  
+    <meta name="description" content="Salesforce Bulk API 2.0 Integration with Apache Camel">
+  
+  
+  
+  
+  <link rel="canonical" href="https://sedatgoc.com/blog/salesforce-bulkapi2-integration-with-apache-camel/">
+  
+
+  
+  
+  
+
+  
+  <meta property="og:url" content="https://sedatgoc.com/blog/salesforce-bulkapi2-integration-with-apache-camel/">
+  <meta property="og:site_name" content="Sedat Goc">
+  <meta property="og:title" content="Salesforce Bulk API 2.0 Integration with Apache Camel">
+  <meta property="og:description" content="Salesforce Bulk API 2.0 Integration with Apache Camel">
+  <meta property="og:locale" content="en_us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="blog">
+    <meta property="article:published_time" content="2026-03-04T22:58:00+01:00">
+    <meta property="article:modified_time" content="2026-03-04T22:58:00+01:00">
+
+  
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Salesforce Bulk API 2.0 Integration with Apache Camel">
+  <meta name="twitter:description" content="Salesforce Bulk API 2.0 Integration with Apache Camel">
+
+  
+  
+  
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+  
+    
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+  
+  
+  
+  
+  
+  
+  
+    
+  
+  
+  <link
+    type="text/css"
+    rel="stylesheet"
+    href="/css/main.bundle.min.135b419383463b826720e4eca9b8c4ec1520fb69ad49740df123cc65e25c462d246f60281936bf4f537859445abd47616998b7c09a771d915f8f1155d124a008.css"
+    integrity="sha512-E1tBk4NGO4JnIOTsqbjE7BUg&#43;2mtSXQN8SPMZeJcRi0kb2AoGTa/T1N4WURavUdhaZi3wJp3HZFfjxFV0SSgCA==">
+
+  
+  
+  <script
+    type="text/javascript"
+    src="/js/appearance.min.6f41174b3a05b680820fe08cadbfa5fb7a7ca347b76a0955cdc68b9d8aca1ce24f0547e138cea33bcc7904d551a90afcb1cc7f2d9fe8557075d501419046c08c.js"
+    integrity="sha512-b0EXSzoFtoCCD&#43;CMrb&#43;l&#43;3p8o0e3aglVzcaLnYrKHOJPBUfhOM6jO8x5BNVRqQr8scx/LZ/oVXB11QFBkEbAjA=="></script>
+  
+  
+  
+  
+  
+  
+    
+    <script src="/lib/zoom/zoom.min.umd.a527109b68c082a70f3697716dd72a9d5aa8b545cf800cecbbc7399f2ca6f6e0ce3e431f2062b48bbfa47c9ea42822714060bef309be073f49b9c0e30d318d7b.js" integrity="sha512-pScQm2jAgqcPNpdxbdcqnVqotUXPgAzsu8c5nyym9uDOPkMfIGK0i7&#43;kfJ6kKCJxQGC&#43;8wm&#43;Bz9JucDjDTGNew=="></script>
+  
+
+  
+  
+  
+    
+  
+  
+    
+  
+  
+  
+  
+  
+  
+    
+    <script
+      defer
+      type="text/javascript"
+      id="script-bundle"
+      src="/js/main.bundle.min.858f7f82734cfae08d59fcf8d0eb186f01706a84e2f7d20d39edfd7bc8bed6166e02d5c65ecce1de82b1ac52d1e01d77bd1a82d19186fdae5fe6e12d867fcf68.js"
+      integrity="sha512-hY9/gnNM&#43;uCNWfz40OsYbwFwaoTi99INOe39e8i&#43;1hZuAtXGXszh3oKxrFLR4B13vRqC0ZGG/a5f5uEthn/PaA=="
+      data-copy="Copy"
+      data-copied="Copied"></script>
+  
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" href="/favicon.ico">
+    <link rel="manifest" href="/site.webmanifest">
+  
+
+  
+  <script type="application/ld+json">
+  [{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "articleSection": "Blogs",
+    "name": "Salesforce Bulk API 2.0 Integration with Apache Camel",
+    "headline": "Salesforce Bulk API 2.0 Integration with Apache Camel",
+    "description": "Salesforce Bulk API 2.0 Integration with Apache Camel",
+    "inLanguage": "en-us",
+    "url" : "https://sedatgoc.com/blog/salesforce-bulkapi2-integration-with-apache-camel/",
+    "author" : {
+      "@type": "Person",
+      "name": ""
+    },
+    "copyrightYear": "2026",
+    "dateCreated": "2026-03-04T22:58:00\u002b01:00",
+    "datePublished": "2026-03-04T22:58:00\u002b01:00",
+    
+    "dateModified": "2026-03-04T22:58:00\u002b01:00",
+    
+    
+    
+    "mainEntityOfPage": "true",
+    "wordCount": "1662"
+  }]
+  </script>
+
+
+
+  
+  
+    
+
+
+
+
+  
+
+  
+  
+
+  
+  
+
+  
+  
+</head>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <body class="flex flex-col h-screen m-auto leading-7 max-w-7xl px-6 sm:px-14 md:px-24 lg:px-32 text-lg bg-neutral text-neutral-900 dark:bg-neutral-800 dark:text-neutral bf-scrollbar">
+    <div id="the-top" class="absolute flex self-center">
+      <a
+        class="px-3 py-1 text-sm -translate-y-8 rounded-b-lg bg-primary-200 focus:translate-y-0 dark:bg-neutral-600"
+        href="#main-content">
+        <span class="font-bold text-primary-600 pe-2 dark:text-primary-400">&darr;</span>
+        Skip to main content
+      </a>
+    </div>
+    
+    
+      <div class="main-menu flex items-center w-full gap-2 p-1 pl-0">
+  
+  
+    <a href="/" class="text-base font-medium truncate min-w-0 shrink">
+      Sedat Goc
+    </a>
+  
+  <div class="flex items-center ms-auto">
+    <div class="hidden md:flex">
+      <nav class="flex items-center gap-x-5 h-12">
+  
+    
+      
+  
+    <a
+      href="/blog/"
+      
+      class="flex items-center bf-icon-color-hover"
+      aria-label="Blog"
+      title="Blogs">
+      
+      
+        <span class="text-base font-medium break-normal">
+          Blog
+        </span>
+      
+    </a>
+  
+
+    
+      
+  
+    <a
+      href="https://github.com/sedatgoc"
+      
+        target="_blank"
+      
+      class="flex items-center bf-icon-color-hover"
+      aria-label="GitHub"
+      title="">
+      
+        <span class="mr-1">
+          <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path fill="currentColor" d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+</span>
+        </span>
+      
+      
+        <span class="text-base font-medium break-normal">
+          GitHub
+        </span>
+      
+    </a>
+  
+
+    
+  
+
+  
+
+  
+
+  
+    <button
+      id="search-button"
+      aria-label="Search"
+      class="text-base bf-icon-color-hover"
+      title="Search (/)">
+      <span class="relative block icon"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+</span>
+    </button>
+  
+
+  
+    <div class="flex items-center">
+      <button
+        id="appearance-switcher"
+        aria-label="Dark mode switcher"
+        type="button"
+        class="text-base bf-icon-color-hover">
+        <div class="flex items-center justify-center dark:hidden">
+          <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M32 256c0-123.8 100.3-224 223.8-224c11.36 0 29.7 1.668 40.9 3.746c9.616 1.777 11.75 14.63 3.279 19.44C245 86.5 211.2 144.6 211.2 207.8c0 109.7 99.71 193 208.3 172.3c9.561-1.805 16.28 9.324 10.11 16.95C387.9 448.6 324.8 480 255.8 480C132.1 480 32 379.6 32 256z"/></svg>
+</span>
+        </div>
+        <div class="items-center justify-center hidden dark:flex">
+          <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M256 159.1c-53.02 0-95.1 42.98-95.1 95.1S202.1 351.1 256 351.1s95.1-42.98 95.1-95.1S309 159.1 256 159.1zM509.3 347L446.1 255.1l63.15-91.01c6.332-9.125 1.104-21.74-9.826-23.72l-109-19.7l-19.7-109c-1.975-10.93-14.59-16.16-23.72-9.824L256 65.89L164.1 2.736c-9.125-6.332-21.74-1.107-23.72 9.824L121.6 121.6L12.56 141.3C1.633 143.2-3.596 155.9 2.736 164.1L65.89 256l-63.15 91.01c-6.332 9.125-1.105 21.74 9.824 23.72l109 19.7l19.7 109c1.975 10.93 14.59 16.16 23.72 9.824L256 446.1l91.01 63.15c9.127 6.334 21.75 1.107 23.72-9.822l19.7-109l109-19.7C510.4 368.8 515.6 356.1 509.3 347zM256 383.1c-70.69 0-127.1-57.31-127.1-127.1c0-70.69 57.31-127.1 127.1-127.1s127.1 57.3 127.1 127.1C383.1 326.7 326.7 383.1 256 383.1z"/></svg>
+</span>
+        </div>
+      </button>
+    </div>
+  
+</nav>
+
+
+
+    </div>
+    <div class="flex md:hidden">
+      <div class="flex items-center h-14 gap-4">
+  
+    <button
+      id="search-button-mobile"
+      aria-label="Search"
+      class="flex items-center justify-center bf-icon-color-hover"
+      title="Search (/)">
+      <span class="relative block icon"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+</span>
+    </button>
+  
+
+  
+    <button
+      id="appearance-switcher-mobile"
+      type="button"
+      aria-label="Dark mode switcher"
+      class="flex items-center justify-center text-neutral-900 hover:text-primary-600 dark:text-neutral-200 dark:hover:text-primary-400">
+      <div class="dark:hidden">
+        <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M32 256c0-123.8 100.3-224 223.8-224c11.36 0 29.7 1.668 40.9 3.746c9.616 1.777 11.75 14.63 3.279 19.44C245 86.5 211.2 144.6 211.2 207.8c0 109.7 99.71 193 208.3 172.3c9.561-1.805 16.28 9.324 10.11 16.95C387.9 448.6 324.8 480 255.8 480C132.1 480 32 379.6 32 256z"/></svg>
+</span>
+      </div>
+      <div class="hidden dark:block">
+        <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M256 159.1c-53.02 0-95.1 42.98-95.1 95.1S202.1 351.1 256 351.1s95.1-42.98 95.1-95.1S309 159.1 256 159.1zM509.3 347L446.1 255.1l63.15-91.01c6.332-9.125 1.104-21.74-9.826-23.72l-109-19.7l-19.7-109c-1.975-10.93-14.59-16.16-23.72-9.824L256 65.89L164.1 2.736c-9.125-6.332-21.74-1.107-23.72 9.824L121.6 121.6L12.56 141.3C1.633 143.2-3.596 155.9 2.736 164.1L65.89 256l-63.15 91.01c-6.332 9.125-1.105 21.74 9.824 23.72l109 19.7l19.7 109c1.975 10.93 14.59 16.16 23.72 9.824L256 446.1l91.01 63.15c9.127 6.334 21.75 1.107 23.72-9.822l19.7-109l109-19.7C510.4 368.8 515.6 356.1 509.3 347zM256 383.1c-70.69 0-127.1-57.31-127.1-127.1c0-70.69 57.31-127.1 127.1-127.1s127.1 57.3 127.1 127.1C383.1 326.7 326.7 383.1 256 383.1z"/></svg>
+</span>
+      </div>
+    </button>
+  
+
+  
+    <input type="checkbox" id="mobile-menu-toggle" autocomplete="off" class="hidden peer">
+    <label for="mobile-menu-toggle" class="flex items-center justify-center cursor-pointer bf-icon-color-hover">
+      <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M0 96C0 78.33 14.33 64 32 64H416C433.7 64 448 78.33 448 96C448 113.7 433.7 128 416 128H32C14.33 128 0 113.7 0 96zM0 256C0 238.3 14.33 224 32 224H416C433.7 224 448 238.3 448 256C448 273.7 433.7 288 416 288H32C14.33 288 0 273.7 0 256zM416 448H32C14.33 448 0 433.7 0 416C0 398.3 14.33 384 32 384H416C433.7 384 448 398.3 448 416C448 433.7 433.7 448 416 448z"/></svg>
+</span>
+    </label>
+
+    <div
+      role="dialog"
+      aria-modal="true"
+      style="scrollbar-gutter: stable;"
+      class="fixed inset-0 z-50 invisible overflow-y-auto px-6 py-20 opacity-0 transition-[opacity,visibility] duration-300 peer-checked:visible peer-checked:opacity-100 bg-neutral-50/97 dark:bg-neutral-900/99
+      bf-scrollbar">
+      <label
+        for="mobile-menu-toggle"
+        class="fixed end-8 top-5 flex items-center justify-center z-50 h-12 w-12 cursor-pointer select-none rounded-full bf-icon-color-hover border bf-border-color bf-border-color-hover bg-neutral-50 dark:bg-neutral-900">
+        <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path fill="currentColor" d="M310.6 361.4c12.5 12.5 12.5 32.75 0 45.25C304.4 412.9 296.2 416 288 416s-16.38-3.125-22.62-9.375L160 301.3L54.63 406.6C48.38 412.9 40.19 416 32 416S15.63 412.9 9.375 406.6c-12.5-12.5-12.5-32.75 0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-105.4 105.4L310.6 361.4z"/></svg>
+</span>
+      </label>
+      <nav class="mx-auto max-w-md space-y-6">
+        
+  
+    
+    <div class="px-2">
+      <a
+        href="/blog/"
+        aria-label="Blog"
+        
+        class="flex items-center gap-4 group bf-icon-color-hover text-neutral-700 dark:text-neutral-200">
+        
+        <span title="Blogs" class="text-2xl font-bold tracking-tight">
+          Blog
+        </span>
+        
+      </a>
+
+      
+    </div>
+  
+    
+    <div class="px-2">
+      <a
+        href="https://github.com/sedatgoc"
+        aria-label="GitHub"
+        
+          target="_blank"
+        
+        class="flex items-center gap-4 group bf-icon-color-hover text-neutral-700 dark:text-neutral-200">
+        
+          <span class="flex items-center justify-center h-8 w-8 text-2xl">
+            <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path fill="currentColor" d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+</span>
+          </span>
+        
+        <span title="" class="text-2xl font-bold tracking-tight">
+          GitHub
+        </span>
+        
+      </a>
+
+      
+    </div>
+  
+
+        
+  
+
+        
+  
+
+      </nav>
+    </div>
+  
+</div>
+
+
+
+
+
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+    
+    <div class="relative flex flex-col grow">
+      <main id="main-content" class="grow">
+        
+  
+  <article>
+    
+    
+
+    
+    <header id="single_header" class="mt-5 max-w-prose">
+      
+      <h1 class="mt-0 text-4xl font-extrabold text-neutral-900 dark:text-neutral">
+        Salesforce Bulk API 2.0 Integration with Apache Camel
+      </h1>
+      <div class="mt-1 mb-6 text-base text-neutral-500 dark:text-neutral-400 print:hidden">
+        
+
+
+
+
+
+  
+  
+
+
+
+  
+
+  
+  
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+  <div class="flex flex-row flex-wrap items-center">
+    
+    
+      <time datetime="2026-03-04T22:58:00&#43;01:00">March 4, 2026</time><span class="px-2 text-primary-500">&middot;</span><span>1662 words</span><span class="px-2 text-primary-500">&middot;</span><span title="Reading time">8 mins</span>
+    
+
+    
+    
+  </div>
+
+  
+
+  
+  
+
+  
+  
+
+
+
+      </div>
+      
+        
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+    
+    
+<div class="flex author">
+  
+  <div class="place-self-center">
+    
+    
+    <div class="text-2xl sm:text-lg">
+</div>
+  </div>
+</div>
+
+  
+
+  
+
+  
+    <div class="mb-5"></div>
+  
+
+      
+    </header>
+
+    
+    <section class="flex flex-col max-w-full mt-0 prose dark:prose-invert lg:flex-row">
+      
+      
+      
+      
+      
+
+
+      <div class="min-w-0 min-h-0 max-w-fit">
+        
+
+        <div class="article-content max-w-prose mb-20">
+          
+<h3 class="relative group">Why I am writing this blog?
+    <div id="why-i-am-writing-this-blog" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#why-i-am-writing-this-blog" aria-label="Anchor">#</a>
+    </span>
+    
+</h3>
+<p><figure><img
+    class="my-0 rounded-md"
+    loading="lazy"
+    decoding="async"
+    fetchpriority="auto"
+    alt="Salesforce Bulk API 2.0 Connectivity with Apache Camel"
+    width="1383"
+    height="850"
+    src="/blog-content/salesforce-bulkapi2-integration-with-apache-camel/apache-camel-salesforcebulkapi2-diagram_hu_a480bd2a77ddaa75.png"
+    srcset="/blog-content/salesforce-bulkapi2-integration-with-apache-camel/apache-camel-salesforcebulkapi2-diagram_hu_a480bd2a77ddaa75.png 800w, /blog-content/salesforce-bulkapi2-integration-with-apache-camel/apache-camel-salesforcebulkapi2-diagram_hu_253d0bf6d69d6411.png 1280w"
+    sizes="(min-width: 768px) 50vw, 65vw"
+    data-zoom-src="/blog-content/salesforce-bulkapi2-integration-with-apache-camel/apache-camel-salesforcebulkapi2-diagram.png"><figcaption>Salesforce Bulk API 2.0 Connectivity with Apache Camel</figcaption></figure>
+</p>
+<p>I have seen many integration projects with Salesforce. In several Salesforce integration projects I have observed that batch lifecycle management is often poorly implemented. I want to show how to upload bulk data to Salesforce via Apache Camel Salesforce component, how to handle errors and failed jobs because most of the integrations does not have proper error handling.</p>
+<p>Why I am using Bulk API 2.0? I am using Bulk API 2.0 because with this way I can upload large amount data into the Salesforce as quickly with <code>streamlined workflow</code>.</p>
+<p>For detailed explanation for Salesforce Bulk API 2.0 you can check official page <a href="https://developer.salesforce.com/docs/atlas.en-us.api_asynch.meta/api_asynch/asynch_api_intro.htm"  target="_blank" rel="noreferrer">https://developer.salesforce.com/docs/atlas.en-us.api_asynch.meta/api_asynch/asynch_api_intro.htm</a></p>
+
+<h3 class="relative group">Project prerequisites &amp; configuration
+    <div id="project-prerequisites--configuration" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#project-prerequisites--configuration" aria-label="Anchor">#</a>
+    </span>
+    
+</h3>
+<ul>
+<li>Salesforce Account</li>
+<li>Apache Camel project
+<ul>
+<li>Java 17+</li>
+<li>Maven</li>
+</ul>
+</li>
+</ul>
+<p>Before beginning to create this project please check official Apache Camel Salesforce page to create Salesforce Developer Org.</p>
+<p><a href="https://camel.apache.org/components/4.14.x/salesforce-component.html#_getting_started"  target="_blank" rel="noreferrer">https://camel.apache.org/components/4.14.x/salesforce-component.html#_getting_started</a></p>
+<p>If you created an app in Salesforce as successfully, create a application.properties in <code>src/main/resources/</code></p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-properties" data-lang="properties"><span style="display:flex;"><span><span style="color:#a6e22e">camel.component.salesforce.login-url</span><span style="color:#f92672">=</span><span style="color:#e6db74">https://*******.my.salesforce.com</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">camel.component.salesforce.client-id</span><span style="color:#f92672">=</span><span style="color:#e6db74">*********</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">camel.component.salesforce.client-secret</span><span style="color:#f92672">=</span><span style="color:#e6db74">************</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">camel.component.salesforce.api-version</span><span style="color:#f92672">=</span><span style="color:#e6db74">66.0 </span></span></span></code></pre></div></div>
+<p>Also this sample CSV file can be use in this project <code>account.csv</code>;</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-csv" data-lang="csv"><span style="display:flex;"><span><span style="color:#e6db74">Name</span>,<span style="color:#e6db74">ShippingCity</span>,<span style="color:#e6db74">NumberOfEmployees</span>,<span style="color:#e6db74">AnnualRevenue</span>,<span style="color:#e6db74">Website</span>,<span style="color:#e6db74">Description</span>
+</span></span><span style="display:flex;"><span><span style="color:#e6db74">Lorem Ipsum</span>,<span style="color:#e6db74">Milano</span>,<span style="color:#e6db74">2676</span>,<span style="color:#e6db74">912260031</span>,<span style="color:#e6db74">https://ft.com/lacus/at.jsp</span>,<span style="color:#e6db74">&#34;Lorem ipsum dolor sit amet&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#e6db74">Posuere Inc</span>,<span style="color:#e6db74">Bodø</span>,<span style="color:#e6db74">141603</span>,<span style="color:#e6db74">896852810</span>,<span style="color:#e6db74">http://webs.com/in/faucibus/orci/luctus/et/ultrices/posuere.json</span>,<span style="color:#e6db74">&#34;consectetur adipiscing elit&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#e6db74">Angeles Urban</span>,<span style="color:#e6db74">Aykol</span>,<span style="color:#e6db74">197724</span>,<span style="color:#e6db74">257060529</span>,<span style="color:#e6db74">http://odnoklassniki.ru/sapien.aspx</span>,<span style="color:#e6db74">&#34;sed do eiusmod tempor incididunt ut labore et dolore magna aliqua&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#e6db74">Madaline Neubert Shoes</span>,<span style="color:#e6db74">Xukou</span>,<span style="color:#e6db74">190305</span>,<span style="color:#e6db74">71664061</span>,<span style="color:#e6db74">https://blogs.com/faucibus/orci/luctus/et/ultrices/posuere/cubilia.json</span>,<span style="color:#e6db74">&#34;Ut enim ad minim veniam&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#e6db74">Times Online UK</span>,<span style="color:#e6db74">Varadero</span>,<span style="color:#e6db74">121802</span>,<span style="color:#e6db74">58284123</span>,<span style="color:#e6db74">http://timesonline.co.uk/eu/magna.html</span>,<span style="color:#e6db74">&#34;quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#e6db74">The Washington Post</span>,<span style="color:#e6db74">Hengdaohezi</span>,<span style="color:#e6db74">190944</span>,<span style="color:#e6db74">164329406</span>,<span style="color:#e6db74">http://washingtonpost.com/vestibulum/proin/eu/mi/nulla/ac/enim.png</span>,<span style="color:#e6db74">&#34;Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#e6db74">Amazon</span>,<span style="color:#e6db74">Quintães</span>,<span style="color:#e6db74">80285</span>,<span style="color:#e6db74">684173825</span>,<span style="color:#e6db74">http://amazon.co.uk/potenti/cras/in/purus/eu.png</span>,<span style="color:#e6db74">&#34;Excepteur sint occaecat cupidatat non proident&#34;</span></span></span></code></pre></div></div>
+<p>This project based on the following <code>pom.xml</code> file.</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-xml" data-lang="xml"><span style="display:flex;"><span><span style="color:#75715e">&lt;?xml version=&#34;1.0&#34; encoding=&#34;UTF-8&#34;?&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&lt;project</span> <span style="color:#a6e22e">xmlns=</span><span style="color:#e6db74">&#34;http://maven.apache.org/POM/4.0.0&#34;</span> <span style="color:#a6e22e">xmlns:xsi=</span><span style="color:#e6db74">&#34;http://www.w3.org/2001/XMLSchema-instance&#34;</span>
+</span></span><span style="display:flex;"><span>         <span style="color:#a6e22e">xsi:schemaLocation=</span><span style="color:#e6db74">&#34;http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd&#34;</span><span style="color:#f92672">&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&lt;modelVersion&gt;</span>4.0.0<span style="color:#f92672">&lt;/modelVersion&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&lt;groupId&gt;</span>io.rsg.apache.camel.learn<span style="color:#f92672">&lt;/groupId&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&lt;artifactId&gt;</span>apache-camel-salesforce-bulkapi-connectivity<span style="color:#f92672">&lt;/artifactId&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&lt;version&gt;</span>1.0-SNAPSHOT<span style="color:#f92672">&lt;/version&gt;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&lt;name&gt;</span>Apache Camel Salesforce Bulk API Example<span style="color:#f92672">&lt;/name&gt;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&lt;properties&gt;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&lt;project.build.sourceEncoding&gt;</span>UTF-8<span style="color:#f92672">&lt;/project.build.sourceEncoding&gt;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&lt;project.reporting.outputEncoding&gt;</span>UTF-8<span style="color:#f92672">&lt;/project.reporting.outputEncoding&gt;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&lt;log4j2-version&gt;</span>2.25.3<span style="color:#f92672">&lt;/log4j2-version&gt;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&lt;camel.version&gt;</span>4.17.0<span style="color:#f92672">&lt;/camel.version&gt;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&lt;maven.compiler.release&gt;</span>17<span style="color:#f92672">&lt;/maven.compiler.release&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&lt;/properties&gt;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&lt;dependencyManagement&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&lt;dependencies&gt;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&lt;dependency&gt;</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&lt;groupId&gt;</span>org.apache.camel<span style="color:#f92672">&lt;/groupId&gt;</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&lt;artifactId&gt;</span>camel-bom<span style="color:#f92672">&lt;/artifactId&gt;</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&lt;version&gt;</span>${camel.version}<span style="color:#f92672">&lt;/version&gt;</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&lt;scope&gt;</span>import<span style="color:#f92672">&lt;/scope&gt;</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&lt;type&gt;</span>pom<span style="color:#f92672">&lt;/type&gt;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&lt;/dependency&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&lt;/dependencies&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&lt;/dependencyManagement&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&lt;dependencies&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&lt;dependency&gt;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&lt;groupId&gt;</span>org.apache.camel<span style="color:#f92672">&lt;/groupId&gt;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&lt;artifactId&gt;</span>camel-core<span style="color:#f92672">&lt;/artifactId&gt;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&lt;version&gt;</span>${camel.version}<span style="color:#f92672">&lt;/version&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&lt;/dependency&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&lt;dependency&gt;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&lt;groupId&gt;</span>org.apache.camel<span style="color:#f92672">&lt;/groupId&gt;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&lt;artifactId&gt;</span>camel-main<span style="color:#f92672">&lt;/artifactId&gt;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&lt;version&gt;</span>${camel.version}<span style="color:#f92672">&lt;/version&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&lt;/dependency&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&lt;dependency&gt;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&lt;groupId&gt;</span>org.apache.camel<span style="color:#f92672">&lt;/groupId&gt;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&lt;artifactId&gt;</span>camel-salesforce<span style="color:#f92672">&lt;/artifactId&gt;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&lt;version&gt;</span>${camel.version}<span style="color:#f92672">&lt;/version&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&lt;/dependency&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">&lt;!-- logging --&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&lt;dependency&gt;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&lt;groupId&gt;</span>org.apache.logging.log4j<span style="color:#f92672">&lt;/groupId&gt;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&lt;artifactId&gt;</span>log4j-slf4j2-impl<span style="color:#f92672">&lt;/artifactId&gt;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&lt;version&gt;</span>${log4j2-version}<span style="color:#f92672">&lt;/version&gt;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&lt;scope&gt;</span>runtime<span style="color:#f92672">&lt;/scope&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&lt;/dependency&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&lt;dependency&gt;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&lt;groupId&gt;</span>org.apache.logging.log4j<span style="color:#f92672">&lt;/groupId&gt;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&lt;artifactId&gt;</span>log4j-core<span style="color:#f92672">&lt;/artifactId&gt;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&lt;version&gt;</span>${log4j2-version}<span style="color:#f92672">&lt;/version&gt;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&lt;scope&gt;</span>runtime<span style="color:#f92672">&lt;/scope&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&lt;/dependency&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&lt;/dependencies&gt;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&lt;build&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&lt;defaultGoal&gt;</span>install<span style="color:#f92672">&lt;/defaultGoal&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&lt;plugins&gt;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&lt;plugin&gt;</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&lt;groupId&gt;</span>org.apache.maven.plugins<span style="color:#f92672">&lt;/groupId&gt;</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&lt;artifactId&gt;</span>maven-compiler-plugin<span style="color:#f92672">&lt;/artifactId&gt;</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&lt;version&gt;</span>3.10.1<span style="color:#f92672">&lt;/version&gt;</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&lt;configuration&gt;</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#f92672">&lt;release&gt;</span>${maven.compiler.release}<span style="color:#f92672">&lt;/release&gt;</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&lt;/configuration&gt;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&lt;/plugin&gt;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&lt;plugin&gt;</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&lt;groupId&gt;</span>org.apache.maven.plugins<span style="color:#f92672">&lt;/groupId&gt;</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&lt;artifactId&gt;</span>maven-resources-plugin<span style="color:#f92672">&lt;/artifactId&gt;</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&lt;version&gt;</span>3.2.0<span style="color:#f92672">&lt;/version&gt;</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&lt;configuration&gt;</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#f92672">&lt;encoding&gt;</span>UTF-8<span style="color:#f92672">&lt;/encoding&gt;</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&lt;/configuration&gt;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&lt;/plugin&gt;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&lt;plugin&gt;</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&lt;groupId&gt;</span>org.apache.camel<span style="color:#f92672">&lt;/groupId&gt;</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&lt;artifactId&gt;</span>camel-maven-plugin<span style="color:#f92672">&lt;/artifactId&gt;</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&lt;version&gt;</span>${camel.version}<span style="color:#f92672">&lt;/version&gt;</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&lt;configuration&gt;</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#f92672">&lt;logClasspath&gt;</span>true<span style="color:#f92672">&lt;/logClasspath&gt;</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#f92672">&lt;mainClass&gt;</span>io.rsg.apache.camel.learn.App<span style="color:#f92672">&lt;/mainClass&gt;</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&lt;/configuration&gt;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&lt;/plugin&gt;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&lt;/plugins&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&lt;/build&gt;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&lt;/project&gt;</span></span></span></code></pre></div></div>
+
+<h4 class="relative group">Create a Job and Upload data into Salesforce
+    <div id="create-a-job-and-upload-data-into-salesforce" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#create-a-job-and-upload-data-into-salesforce" aria-label="Anchor">#</a>
+    </span>
+    
+</h4>
+<p>To create a job for upload CSV data into Salesforce, we need to create a Job object. First, we need to create a Job object then set this object as exchange&rsquo;s body. I created a new processor that is called <code>AccountJobProcessor</code>.</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#f92672">package</span> io.rsg.apache.camel.learn.processors;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> org.apache.camel.Exchange;
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> org.apache.camel.Processor;
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> org.apache.camel.component.salesforce.api.dto.bulkv2.ContentTypeEnum;
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> org.apache.camel.component.salesforce.api.dto.bulkv2.Job;
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> org.apache.camel.component.salesforce.api.dto.bulkv2.LineEndingEnum;
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> org.apache.camel.component.salesforce.api.dto.bulkv2.OperationEnum;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">AccountJobProcessor</span> <span style="color:#66d9ef">implements</span> Processor {
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">@Override</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">process</span>(Exchange exchange) <span style="color:#66d9ef">throws</span> Exception {
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        Job bulk2CreateJob <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Job();
+</span></span><span style="display:flex;"><span>        bulk2CreateJob.<span style="color:#a6e22e">setObject</span>(<span style="color:#e6db74">&#34;Account&#34;</span>); <span style="color:#75715e">// Depends on your requirements. In this case, it should be Account</span>
+</span></span><span style="display:flex;"><span>        bulk2CreateJob.<span style="color:#a6e22e">setContentType</span>(ContentTypeEnum.<span style="color:#a6e22e">CSV</span>); <span style="color:#75715e">// In this case, it should be CSV</span>
+</span></span><span style="display:flex;"><span>        bulk2CreateJob.<span style="color:#a6e22e">setOperation</span>(OperationEnum.<span style="color:#a6e22e">INSERT</span>); <span style="color:#75715e">// In this case it should be Insert</span>
+</span></span><span style="display:flex;"><span>        bulk2CreateJob.<span style="color:#a6e22e">setLineEnding</span>(LineEndingEnum.<span style="color:#a6e22e">LF</span>); <span style="color:#75715e">// Depend on line ending of CSV</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        exchange.<span style="color:#a6e22e">getIn</span>().<span style="color:#a6e22e">setBody</span>(bulk2CreateJob); <span style="color:#75715e">// Set Job object as body</span>
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}</span></span></code></pre></div></div>
+<p>The processor can be defined in the router but with this way this processor can be used for another routers. If you do not want to use this processor again, you can define this processor into route like this;</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-java" data-lang="java"><span style="display:flex;"><span>    from(<span style="color:#e6db74">&#34;file:./salesforce&#34;</span>).<span style="color:#a6e22e">process</span>(<span style="color:#66d9ef">new</span> Processor() {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">process</span>(Exchange exchange) <span style="color:#66d9ef">throws</span> Exception {
+</span></span><span style="display:flex;"><span>            Job bulk2CreateJob <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Job();
+</span></span><span style="display:flex;"><span>            bulk2CreateJob.<span style="color:#a6e22e">setObject</span>(<span style="color:#e6db74">&#34;Account&#34;</span>); <span style="color:#75715e">// Depends on your requirements. In this case, it should be Account</span>
+</span></span><span style="display:flex;"><span>            bulk2CreateJob.<span style="color:#a6e22e">setContentType</span>(ContentTypeEnum.<span style="color:#a6e22e">CSV</span>); <span style="color:#75715e">// In this case, it should be CSV</span>
+</span></span><span style="display:flex;"><span>            bulk2CreateJob.<span style="color:#a6e22e">setOperation</span>(OperationEnum.<span style="color:#a6e22e">INSERT</span>); <span style="color:#75715e">// In this case it should be Insert</span>
+</span></span><span style="display:flex;"><span>            bulk2CreateJob.<span style="color:#a6e22e">setLineEnding</span>(LineEndingEnum.<span style="color:#a6e22e">LF</span>); <span style="color:#75715e">// Depend on line ending of CSV</span>
+</span></span><span style="display:flex;"><span>            exchange.<span style="color:#a6e22e">getIn</span>().<span style="color:#a6e22e">setBody</span>(bulk2CreateJob); <span style="color:#75715e">// Set Job object as body</span>
+</span></span><span style="display:flex;"><span>       }
+</span></span><span style="display:flex;"><span>    }).<span style="color:#a6e22e">to</span>(<span style="color:#e6db74">&#34;salesforce:bulk2CreateJob&#34;</span>);</span></span></code></pre></div></div>
+<p>After creating Job processor, we can start to create a router for bulk upload.</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#f92672">package</span> io.rsg.apache.camel.learn.routers;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> io.rsg.apache.camel.learn.processors.AccountJobProcessor;
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> org.apache.camel.builder.RouteBuilder;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">SalesforceBulkAPIProducerRouterBuilder</span> <span style="color:#66d9ef">extends</span> RouteBuilder {
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">@Override</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">configure</span>() <span style="color:#66d9ef">throws</span> Exception {
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        from(<span style="color:#e6db74">&#34;timer://readAccountCSV?fixedRate=true&amp;period=60000&#34;</span>) <span style="color:#75715e">// Define a timer read files every 60 seconds.</span>
+</span></span><span style="display:flex;"><span>                .<span style="color:#a6e22e">process</span>(<span style="color:#66d9ef">new</span> AccountJobProcessor()) <span style="color:#75715e">// Create a Job for Account</span>
+</span></span><span style="display:flex;"><span>                .<span style="color:#a6e22e">to</span>(<span style="color:#e6db74">&#34;salesforce:bulk2CreateJob&#34;</span>) <span style="color:#75715e">// Send Job object to Salesforce</span>
+</span></span><span style="display:flex;"><span>                .<span style="color:#a6e22e">setProperty</span>(<span style="color:#e6db74">&#34;jobId&#34;</span>,simple(<span style="color:#e6db74">&#34;${body.id}&#34;</span>)) <span style="color:#75715e">// Get JobID from Salesforce response body and set as property</span>
+</span></span><span style="display:flex;"><span>                .<span style="color:#a6e22e">pollEnrich</span>(<span style="color:#e6db74">&#34;file:./salesforce?noop=true&amp;fileName=account.csv&#34;</span>) <span style="color:#75715e">// Read Account.CSV</span>
+</span></span><span style="display:flex;"><span>                    .<span style="color:#a6e22e">toD</span>(<span style="color:#e6db74">&#34;salesforce:bulk2CreateBatch?jobId=${exchangeProperty.jobId}&#34;</span>) <span style="color:#75715e">// Send Account CSV to Salesforce</span>
+</span></span><span style="display:flex;"><span>                    .<span style="color:#a6e22e">toD</span>(<span style="color:#e6db74">&#34;salesforce:bulk2CloseJob?jobId=${exchangeProperty.jobId}&#34;</span>) <span style="color:#75715e">// Close Job in Salesforce</span>
+</span></span><span style="display:flex;"><span>                    .<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#34;${body}&#34;</span>) <span style="color:#75715e">// Print Salesforce Log</span>
+</span></span><span style="display:flex;"><span>                .<span style="color:#a6e22e">end</span>();
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}</span></span></code></pre></div></div>
+<p>If you configured everything correctly, you will see these logs;</p>
+<p><figure><img
+    class="my-0 rounded-md"
+    loading="lazy"
+    decoding="async"
+    fetchpriority="auto"
+    alt="Salesforce Bulk Upload Log"
+    width="3140"
+    height="342"
+    src="/blog-content/salesforce-bulkapi2-integration-with-apache-camel/apache-camel-salesforce-bulkapi2-bulkupload-log-result_hu_40cdb8f840e7789c.png"
+    srcset="/blog-content/salesforce-bulkapi2-integration-with-apache-camel/apache-camel-salesforce-bulkapi2-bulkupload-log-result_hu_40cdb8f840e7789c.png 800w, /blog-content/salesforce-bulkapi2-integration-with-apache-camel/apache-camel-salesforce-bulkapi2-bulkupload-log-result_hu_e890571bfd829f1a.png 1280w"
+    sizes="(min-width: 768px) 50vw, 65vw"
+    data-zoom-src="/blog-content/salesforce-bulkapi2-integration-with-apache-camel/apache-camel-salesforce-bulkapi2-bulkupload-log-result.png"><figcaption>Salesforce Bulk Upload Log</figcaption></figure>
+</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-json" data-lang="json"><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;id&#34;</span>: <span style="color:#e6db74">&#34;750fj00000JFv7tAAD&#34;</span>,
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;contentType&#34;</span>: <span style="color:#e6db74">&#34;CSV&#34;</span>,
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;object&#34;</span>: <span style="color:#e6db74">&#34;Account&#34;</span>,
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;apiVersion&#34;</span>: <span style="color:#e6db74">&#34;66.0&#34;</span>,
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;createdById&#34;</span>: <span style="color:#e6db74">&#34;005fj00000DGrAXAA1&#34;</span>,
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;createdDate&#34;</span>: <span style="color:#e6db74">&#34;2026-03-03T19:52:23.000+0100&#34;</span>,
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;state&#34;</span>: <span style="color:#e6db74">&#34;UploadComplete&#34;</span>,
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;concurrencyMode&#34;</span>: <span style="color:#e6db74">&#34;Parallel&#34;</span>,
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;systemModstamp&#34;</span>: <span style="color:#e6db74">&#34;2026-03-03T19:52:23.000+0100&#34;</span>,
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;operation&#34;</span>: <span style="color:#e6db74">&#34;insert&#34;</span>
+</span></span><span style="display:flex;"><span>}</span></span></code></pre></div></div>
+
+<h3 class="relative group">Log was successful, right?
+    <div id="log-was-successful-right" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#log-was-successful-right" aria-label="Anchor">#</a>
+    </span>
+    
+</h3>
+<p>Actually you can not be sure with this response because Salesforce&rsquo;s Bulk API is working as asynchronously. So, how can we be sure job status? For this problem, we have <code>bulk2GetAllJobs</code> option in Salesforce component, but I want to focus error handling before create a route for get jobs details.</p>
+<p>Let&rsquo;s start to improve our router with error handling (If you are not familiar with exception in Apache Camel you can follow this link <a href="https://camel.apache.org/manual/exception-clause.html%29"  target="_blank" rel="noreferrer">https://camel.apache.org/manual/exception-clause.html)</a>. Basically I am going to use <code>onException</code> in this case. Before beginning to write exception handle I want to create another route to send email to me if route faces any error.</p>
+<p>First configure <code>application.properties</code> with your email configuration.</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-properties" data-lang="properties"><span style="display:flex;"><span><span style="color:#a6e22e">camel.email.password</span><span style="color:#f92672">=</span><span style="color:#e6db74">*******</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">camel.email.username</span><span style="color:#f92672">=</span><span style="color:#e6db74">********</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">camel.email.smtp.address</span><span style="color:#f92672">=</span><span style="color:#e6db74">******</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">camel.email.smtp.port</span><span style="color:#f92672">=</span><span style="color:#e6db74">******</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">camel.email.to.username</span><span style="color:#f92672">=</span><span style="color:#e6db74">******</span></span></span></code></pre></div></div>
+<p>Also we need to add Apache Camel Mail dependency into <code>pom.xml</code>;</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-xml" data-lang="xml"><span style="display:flex;"><span>    <span style="color:#f92672">&lt;dependency&gt;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&lt;groupId&gt;</span>org.apache.camel<span style="color:#f92672">&lt;/groupId&gt;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&lt;artifactId&gt;</span>camel-mail<span style="color:#f92672">&lt;/artifactId&gt;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&lt;version&gt;</span>${camel.version}<span style="color:#f92672">&lt;/version&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&lt;/dependency&gt;</span></span></span></code></pre></div></div>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#f92672">package</span> io.rsg.apache.camel.learn.routers;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> org.apache.camel.PropertyInject;
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> org.apache.camel.builder.RouteBuilder;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">AlertRouterBuilder</span> <span style="color:#66d9ef">extends</span> RouteBuilder {
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">@PropertyInject</span>(<span style="color:#e6db74">&#34;camel.email.to.username&#34;</span>)
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">private</span> String toUsername;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">@PropertyInject</span>(<span style="color:#e6db74">&#34;camel.email.username&#34;</span>)
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">private</span> String fromUsername;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">@Override</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">configure</span>() <span style="color:#66d9ef">throws</span> Exception {
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        from(<span style="color:#e6db74">&#34;direct:sendAlert&#34;</span>)
+</span></span><span style="display:flex;"><span>                .<span style="color:#a6e22e">process</span>(exchange <span style="color:#f92672">-&gt;</span> {
+</span></span><span style="display:flex;"><span>                    exchange.<span style="color:#a6e22e">getIn</span>().<span style="color:#a6e22e">setHeader</span>(<span style="color:#e6db74">&#34;To&#34;</span>, toUsername); <span style="color:#75715e">// Set Email-TO parameter</span>
+</span></span><span style="display:flex;"><span>                    exchange.<span style="color:#a6e22e">getIn</span>().<span style="color:#a6e22e">setHeader</span>(<span style="color:#e6db74">&#34;From&#34;</span>, fromUsername);<span style="color:#75715e">// Set Email-From parameter</span>
+</span></span><span style="display:flex;"><span>                    exchange.<span style="color:#a6e22e">getIn</span>().<span style="color:#a6e22e">setHeader</span>(<span style="color:#e6db74">&#34;Subject&#34;</span>, <span style="color:#e6db74">&#34;Camel Salesforce Alert!&#34;</span>); <span style="color:#75715e">// Set Email Subject</span>
+</span></span><span style="display:flex;"><span>                    
+</span></span><span style="display:flex;"><span>                    <span style="color:#75715e">//Check alert body set already by different route</span>
+</span></span><span style="display:flex;"><span>                    <span style="color:#66d9ef">if</span>(<span style="color:#f92672">!</span>exchange.<span style="color:#a6e22e">getProperty</span>(<span style="color:#e6db74">&#34;messageSetByFailedJobDetailRouter&#34;</span>, Boolean.<span style="color:#a6e22e">class</span>)){
+</span></span><span style="display:flex;"><span>                        String body <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Hello. Your Salesforce route has an error. Please check it. Message Id : &#34;</span><span style="color:#f92672">+</span>exchange.<span style="color:#a6e22e">getIn</span>().<span style="color:#a6e22e">getMessageId</span>(); <span style="color:#75715e">// define a message body</span>
+</span></span><span style="display:flex;"><span>                        exchange.<span style="color:#a6e22e">getIn</span>().<span style="color:#a6e22e">setBody</span>(body); <span style="color:#75715e">// set as body</span>
+</span></span><span style="display:flex;"><span>                    }
+</span></span><span style="display:flex;"><span>                })
+</span></span><span style="display:flex;"><span>                <span style="color:#75715e">// Mail component configuration will be different with your email provider. In this case I am using Apple email server</span>
+</span></span><span style="display:flex;"><span>                .<span style="color:#a6e22e">to</span>(<span style="color:#e6db74">&#34;smtp://{{camel.email.smtp.address}}:{{camel.email.smtp.port}}?&#34;</span> <span style="color:#f92672">+</span>
+</span></span><span style="display:flex;"><span>                        <span style="color:#e6db74">&#34;username={{camel.email.username}}&#34;</span> <span style="color:#f92672">+</span>
+</span></span><span style="display:flex;"><span>                        <span style="color:#e6db74">&#34;&amp;password={{camel.email.password}}&#34;</span> <span style="color:#f92672">+</span>
+</span></span><span style="display:flex;"><span>                        <span style="color:#e6db74">&#34;&amp;mail.smtp.auth=true&#34;</span> <span style="color:#f92672">+</span>
+</span></span><span style="display:flex;"><span>                        <span style="color:#e6db74">&#34;&amp;mail.smtp.starttls.enable=true&#34;</span> <span style="color:#f92672">+</span>
+</span></span><span style="display:flex;"><span>                        <span style="color:#e6db74">&#34;&amp;mail.smtp.starttls.required=true&#34;</span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}</span></span></code></pre></div></div>
+<p>Then we need some changes on our Salesforce route.</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#f92672">package</span> io.rsg.apache.camel.learn.routers;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> io.rsg.apache.camel.learn.processors.AccountJobProcessor;
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> org.apache.camel.LoggingLevel;
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> org.apache.camel.builder.RouteBuilder;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">SalesforceBulkAPIProducerRouterBuilder</span> <span style="color:#66d9ef">extends</span> RouteBuilder {
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">@Override</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">configure</span>() <span style="color:#66d9ef">throws</span> Exception {
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        onException(Exception.<span style="color:#a6e22e">class</span>)
+</span></span><span style="display:flex;"><span>                .<span style="color:#a6e22e">id</span>(<span style="color:#e6db74">&#34;Error Handler&#34;</span>)
+</span></span><span style="display:flex;"><span>                .<span style="color:#a6e22e">retryAttemptedLogLevel</span>(LoggingLevel.<span style="color:#a6e22e">INFO</span>) <span style="color:#75715e">// Set Retry Log Info.</span>
+</span></span><span style="display:flex;"><span>                .<span style="color:#a6e22e">redeliveryDelay</span>(60000) <span style="color:#75715e">// Delay between retries</span>
+</span></span><span style="display:flex;"><span>                .<span style="color:#a6e22e">maximumRedeliveries</span>(3) <span style="color:#75715e">// Maximum retry count</span>
+</span></span><span style="display:flex;"><span>                .<span style="color:#a6e22e">handled</span>(<span style="color:#66d9ef">true</span>) <span style="color:#75715e">// Set error as handled. Don&#39;t throw an exception to main route.</span>
+</span></span><span style="display:flex;"><span>                .<span style="color:#a6e22e">wireTap</span>(<span style="color:#e6db74">&#34;direct:sendAlert&#34;</span>); <span style="color:#75715e">// Send alert to responsible for this flow asynchronous.</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        from(<span style="color:#e6db74">&#34;timer://readAccountCSV?fixedRate=true&amp;period=60000&amp;bridgeErrorHandler=true&#34;</span>) <span style="color:#75715e">// Define a timer read files every 60 seconds.</span>
+</span></span><span style="display:flex;"><span>                .<span style="color:#a6e22e">routeId</span>(<span style="color:#e6db74">&#34;Salesforce Bulk Upload Route&#34;</span>)
+</span></span><span style="display:flex;"><span>                .<span style="color:#a6e22e">process</span>(<span style="color:#66d9ef">new</span> AccountJobProcessor()) <span style="color:#75715e">// Create a Job for Account</span>
+</span></span><span style="display:flex;"><span>                .<span style="color:#a6e22e">to</span>(<span style="color:#e6db74">&#34;salesforce:bulk2CreateJob&#34;</span>) <span style="color:#75715e">// Send Job object to Salesforce</span>
+</span></span><span style="display:flex;"><span>                .<span style="color:#a6e22e">setProperty</span>(<span style="color:#e6db74">&#34;jobId&#34;</span>,simple(<span style="color:#e6db74">&#34;${body.id}&#34;</span>)) <span style="color:#75715e">// Get JobID from Salesforce response body and set as property</span>
+</span></span><span style="display:flex;"><span>                .<span style="color:#a6e22e">pollEnrich</span>(<span style="color:#e6db74">&#34;file:./salesforce?noop=true&amp;fileName=account.csv&#34;</span>) <span style="color:#75715e">// Read Account.CSV</span>
+</span></span><span style="display:flex;"><span>                    .<span style="color:#a6e22e">toD</span>(<span style="color:#e6db74">&#34;salesforce:bulk2CreateBatch?jobId=${exchangeProperty.jobId}&#34;</span>) <span style="color:#75715e">// Send Account CSV to Salesforce</span>
+</span></span><span style="display:flex;"><span>                    .<span style="color:#a6e22e">toD</span>(<span style="color:#e6db74">&#34;salesforce:bulk2CloseJob?jobId=${exchangeProperty.jobId}&#34;</span>) <span style="color:#75715e">// Close Job in Salesforce</span>
+</span></span><span style="display:flex;"><span>                .<span style="color:#a6e22e">end</span>();
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}</span></span></code></pre></div></div>
+<blockquote><p>I am using wireTap to send alert because I don&rsquo;t want to block main route with email errors. Wiretap explained Apache Camel documentation : <a href="https://camel.apache.org/components/4.14.x/eips/wireTap-eip.html"  target="_blank" rel="noreferrer">https://camel.apache.org/components/4.14.x/eips/wireTap-eip.html</a></p>
+</blockquote><p>With these changes, we can manage errors basically and send alert emails to recipients about the error.</p>
+
+<h3 class="relative group">What happened to our jobs in Salesforce?
+    <div id="what-happened-to-our-jobs-in-salesforce" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#what-happened-to-our-jobs-in-salesforce" aria-label="Anchor">#</a>
+    </span>
+    
+</h3>
+<p>Perhaps you&rsquo;re wondering what happened to the Jobs in Salesforce. To satisfy your curiosity, I want to show how to check your Job states and how to manage failed jobs.</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#f92672">package</span> io.rsg.apache.camel.learn.routers;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> org.apache.camel.builder.RouteBuilder;
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> java.time.OffsetDateTime;
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> java.time.format.DateTimeFormatter;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">SalesforceBulkGetAllJobsRouterBuilder</span> <span style="color:#66d9ef">extends</span> RouteBuilder {
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">@Override</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">configure</span>() <span style="color:#66d9ef">throws</span> Exception {
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        from(<span style="color:#e6db74">&#34;timer://getAllJobs?fixedRate=true&amp;period=10000&#34;</span>)
+</span></span><span style="display:flex;"><span>                .<span style="color:#a6e22e">routeId</span>(<span style="color:#e6db74">&#34;Get All Jobs&#34;</span>)
+</span></span><span style="display:flex;"><span>                .<span style="color:#a6e22e">to</span>(<span style="color:#e6db74">&#34;salesforce:bulk2GetAllJobs&#34;</span>) <span style="color:#75715e">// Get All Jobs from Salesforce</span>
+</span></span><span style="display:flex;"><span>                .<span style="color:#a6e22e">convertBodyTo</span>(String.<span style="color:#a6e22e">class</span>) <span style="color:#75715e">// Convert body to String to parse with jsonpath</span>
+</span></span><span style="display:flex;"><span>                .<span style="color:#a6e22e">split</span>(jsonpath(<span style="color:#e6db74">&#34;$.records&#34;</span>))<span style="color:#75715e">// Split response of Salesforce by records</span>
+</span></span><span style="display:flex;"><span>                .<span style="color:#a6e22e">toD</span>(<span style="color:#e6db74">&#34;salesforce:bulk2GetJob?jobId=${body[id]}&#34;</span>)
+</span></span><span style="display:flex;"><span>                .<span style="color:#a6e22e">choice</span>()
+</span></span><span style="display:flex;"><span>                    .<span style="color:#a6e22e">when</span>(simple(<span style="color:#e6db74">&#34;${body.state} == &#39;JobComplete&#39; &amp;&amp; ${body?.numberRecordsFailed} &gt; 0&#34;</span>)) <span style="color:#75715e">// Check if Job status is JobComplete but has failedRecords</span>
+</span></span><span style="display:flex;"><span>                        .<span style="color:#a6e22e">setProperty</span>(<span style="color:#e6db74">&#34;collectUnprocessedRecords&#34;</span>, constant(<span style="color:#66d9ef">true</span>))
+</span></span><span style="display:flex;"><span>                        .<span style="color:#a6e22e">to</span>(<span style="color:#e6db74">&#34;direct:getFailedJobDetail&#34;</span>) <span style="color:#75715e">// Check failed Job details</span>
+</span></span><span style="display:flex;"><span>                    .<span style="color:#a6e22e">when</span>(simple(<span style="color:#e6db74">&#34;${body.state} == &#39;Failed&#39;&#34;</span>)) <span style="color:#75715e">// Check if Job status is Failed</span>
+</span></span><span style="display:flex;"><span>                        .<span style="color:#a6e22e">to</span>(<span style="color:#e6db74">&#34;direct:getFailedJobDetail&#34;</span>) <span style="color:#75715e">// Check failed Job details</span>
+</span></span><span style="display:flex;"><span>                    .<span style="color:#a6e22e">when</span>(simple(<span style="color:#e6db74">&#34;${body.state} == &#39;Open&#39;&#34;</span>))<span style="color:#75715e">// Check if Job status is Open</span>
+</span></span><span style="display:flex;"><span>                            .<span style="color:#a6e22e">choice</span>()
+</span></span><span style="display:flex;"><span>                                .<span style="color:#a6e22e">when</span>(method(SalesforceBulkGetAllJobsRouterBuilder.<span style="color:#a6e22e">class</span>, <span style="color:#e6db74">&#34;isOlderThan15Minutes(${body.createdDate})&#34;</span>)) <span style="color:#75715e">// Check Job is opened since 15 min</span>
+</span></span><span style="display:flex;"><span>                                    .<span style="color:#a6e22e">toD</span>(<span style="color:#e6db74">&#34;salesforce:bulk2AbortJob?jobId=${body.id}&#34;</span>) <span style="color:#75715e">// Abort zombie Jobs in Salesforce</span>
+</span></span><span style="display:flex;"><span>                            .<span style="color:#a6e22e">endChoice</span>()
+</span></span><span style="display:flex;"><span>                .<span style="color:#a6e22e">endChoice</span>()
+</span></span><span style="display:flex;"><span>                .<span style="color:#a6e22e">end</span>();
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        from(<span style="color:#e6db74">&#34;direct:getFailedJobDetail&#34;</span>)
+</span></span><span style="display:flex;"><span>                .<span style="color:#a6e22e">routeId</span>(<span style="color:#e6db74">&#34;Get Failed Job Detail&#34;</span>)
+</span></span><span style="display:flex;"><span>                .<span style="color:#a6e22e">setProperty</span>(<span style="color:#e6db74">&#34;failedJobId&#34;</span>,simple(<span style="color:#e6db74">&#34;${body.id}&#34;</span>)) <span style="color:#75715e">// Define jobId to use dynamically in the endpoints</span>
+</span></span><span style="display:flex;"><span>                .<span style="color:#a6e22e">toD</span>(<span style="color:#e6db74">&#34;salesforce:bulk2GetJob?jobId=${exchangeProperty.failedJobId}&#34;</span>) <span style="color:#75715e">// Get status of Job by jobId</span>
+</span></span><span style="display:flex;"><span>                .<span style="color:#a6e22e">setProperty</span>(<span style="color:#e6db74">&#34;jobErrorMessage&#34;</span>, simple(<span style="color:#e6db74">&#34;${body.errorMessage}&#34;</span>)) <span style="color:#75715e">// Set Job Error Message property</span>
+</span></span><span style="display:flex;"><span>                .<span style="color:#a6e22e">toD</span>(<span style="color:#e6db74">&#34;salesforce:bulk2GetFailedResults?jobId=${exchangeProperty.failedJobId}&#34;</span>)  <span style="color:#75715e">// Get failed Job details by jobId</span>
+</span></span><span style="display:flex;"><span>                .<span style="color:#a6e22e">setProperty</span>(<span style="color:#e6db74">&#34;jobFailedMessage&#34;</span>, simple(<span style="color:#e6db74">&#34;${body}&#34;</span>)) <span style="color:#75715e">// Set Failed Message property</span>
+</span></span><span style="display:flex;"><span>                .<span style="color:#a6e22e">choice</span>()
+</span></span><span style="display:flex;"><span>                    .<span style="color:#a6e22e">when</span>(simple(<span style="color:#e6db74">&#34;${exchangeProperty.collectUnprocessedRecords}&#34;</span>)) <span style="color:#75715e">// Collect Unprocessed Records enable</span>
+</span></span><span style="display:flex;"><span>                        .<span style="color:#a6e22e">to</span>(<span style="color:#e6db74">&#34;file:./salesforce/error?fileName=salesforce_errors.log&amp;fileExist=Append&#34;</span>) <span style="color:#75715e">// Append to logs files</span>
+</span></span><span style="display:flex;"><span>                .<span style="color:#a6e22e">endChoice</span>()
+</span></span><span style="display:flex;"><span>                .<span style="color:#a6e22e">setBody</span>(simple(<span style="color:#e6db74">&#34;Job Error Detail : ${exchangeProperty.jobErrorMessage} \n Failed Detail : ${exchangeProperty.jobFailedMessage}&#34;</span>)) <span style="color:#75715e">// Prepare the email body</span>
+</span></span><span style="display:flex;"><span>                .<span style="color:#a6e22e">setProperty</span>(<span style="color:#e6db74">&#34;messageSetByFailedJobDetailRouter&#34;</span>,constant(<span style="color:#66d9ef">true</span>)) <span style="color:#75715e">// Define a property to use in alert route to check body is set by this router.</span>
+</span></span><span style="display:flex;"><span>                .<span style="color:#a6e22e">wireTap</span>(<span style="color:#e6db74">&#34;direct:sendAlert&#34;</span>) <span style="color:#75715e">// Send Alert to email</span>
+</span></span><span style="display:flex;"><span>                .<span style="color:#a6e22e">end</span>();
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">//Compare Job createdDate with current date. 15 minute just an example</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">boolean</span> <span style="color:#a6e22e">isOlderThan15Minutes</span>(String createdDate) {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> (createdDate <span style="color:#f92672">==</span> <span style="color:#66d9ef">null</span> <span style="color:#f92672">||</span> createdDate.<span style="color:#a6e22e">isEmpty</span>()) <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">false</span>;
+</span></span><span style="display:flex;"><span>        OffsetDateTime created <span style="color:#f92672">=</span> OffsetDateTime.<span style="color:#a6e22e">parse</span>(createdDate, DateTimeFormatter.<span style="color:#a6e22e">ISO_DATE_TIME</span>);
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> created.<span style="color:#a6e22e">isBefore</span>(OffsetDateTime.<span style="color:#a6e22e">now</span>().<span style="color:#a6e22e">minusMinutes</span>(15));
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}</span></span></code></pre></div></div>
+<p><figure><img
+    class="my-0 rounded-md"
+    loading="lazy"
+    decoding="async"
+    fetchpriority="auto"
+    alt="Failed Job Alert"
+    width="1592"
+    height="382"
+    src="/blog-content/salesforce-bulkapi2-integration-with-apache-camel/apache-camel-salesforce-bulkapi2-alert-example_hu_c7d26b5ac91dc0da.png"
+    srcset="/blog-content/salesforce-bulkapi2-integration-with-apache-camel/apache-camel-salesforce-bulkapi2-alert-example_hu_c7d26b5ac91dc0da.png 800w, /blog-content/salesforce-bulkapi2-integration-with-apache-camel/apache-camel-salesforce-bulkapi2-alert-example_hu_5c93c25003333422.png 1280w"
+    sizes="(min-width: 768px) 50vw, 65vw"
+    data-zoom-src="/blog-content/salesforce-bulkapi2-integration-with-apache-camel/apache-camel-salesforce-bulkapi2-alert-example.png"><figcaption>Failed Job Alert</figcaption></figure>
+</p>
+<p><figure><img
+    class="my-0 rounded-md"
+    loading="lazy"
+    decoding="async"
+    fetchpriority="auto"
+    alt="Failed Records Alert"
+    width="2030"
+    height="460"
+    src="/blog-content/salesforce-bulkapi2-integration-with-apache-camel/apache-camel-salesforce-bulkapi-failed-records-alert_hu_dfabeae4454cc688.png"
+    srcset="/blog-content/salesforce-bulkapi2-integration-with-apache-camel/apache-camel-salesforce-bulkapi-failed-records-alert_hu_dfabeae4454cc688.png 800w, /blog-content/salesforce-bulkapi2-integration-with-apache-camel/apache-camel-salesforce-bulkapi-failed-records-alert_hu_9d236d67a1a4556a.png 1280w"
+    sizes="(min-width: 768px) 50vw, 65vw"
+    data-zoom-src="/blog-content/salesforce-bulkapi2-integration-with-apache-camel/apache-camel-salesforce-bulkapi-failed-records-alert.png"><figcaption>Failed Records Alert</figcaption></figure>
+</p>
+<p>Also, we have to see the logs in local folder.</p>
+<p><figure><img
+    class="my-0 rounded-md"
+    loading="lazy"
+    decoding="async"
+    fetchpriority="auto"
+    alt="Error Log"
+    width="570"
+    height="164"
+    src="/blog-content/salesforce-bulkapi2-integration-with-apache-camel/apache-camel-salesforce-bulkapi2-error-log.png"
+    srcset="/blog-content/salesforce-bulkapi2-integration-with-apache-camel/apache-camel-salesforce-bulkapi2-error-log.png 800w, /blog-content/salesforce-bulkapi2-integration-with-apache-camel/apache-camel-salesforce-bulkapi2-error-log.png 1280w"
+    sizes="(min-width: 768px) 50vw, 65vw"
+    data-zoom-src="/blog-content/salesforce-bulkapi2-integration-with-apache-camel/apache-camel-salesforce-bulkapi2-error-log.png"><figcaption>Error Log</figcaption></figure>
+</p>
+<div class="highlight-wrapper"><pre tabindex="0"><code class="language-log" data-lang="log">&#34;sf__Id&#34;,&#34;sf__Error&#34;,Name,ShippingCity,NumberOfEmployees,AnnualRevenue,Website,Description
+&#34;&#34;,&#34;INVALID_FIELD:Failed to deserialize field at col 2. Due to, &#39;1s90944&#39; is not a valid value for the type xsd:int:NumberOfEmployees --&#34;,&#34;The Washington Post&#34;,&#34;Hengdaohezi&#34;,&#34;1s90944&#34;,&#34;1.64329406E8&#34;,&#34;http://washingtonpost.com/vestibulum/proin/eu/mi/nulla/ac/enim.png&#34;,&#34;Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur&#34;
+&#34;sf__Id&#34;,&#34;sf__Error&#34;,Name,ShippingCity,NumberOfEmployees,AnnualRevenue,Website,Description
+&#34;&#34;,&#34;INVALID_FIELD:Failed to deserialize field at col 2. Due to, &#39;1s90944&#39; is not a valid value for the type xsd:int:NumberOfEmployees --&#34;,&#34;The Washington Post&#34;,&#34;Hengdaohezi&#34;,&#34;1s90944&#34;,&#34;1.64329406E8&#34;,&#34;http://washingtonpost.com/vestibulum/proin/eu/mi/nulla/ac/enim.png&#34;,&#34;Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur&#34;
+&#34;sf__Id&#34;,&#34;sf__Error&#34;,Name,ShippingCity,NumberOfEmployees,AnnualRevenue,Website,Description
+&#34;&#34;,&#34;INVALID_FIELD:Failed to deserialize field at col 2. Due to, &#39;1s90944&#39; is not a valid value for the type xsd:int:NumberOfEmployees --&#34;,&#34;The Washington Post&#34;,&#34;Hengdaohezi&#34;,&#34;1s90944&#34;,&#34;1.64329406E8&#34;,&#34;http://washingtonpost.com/vestibulum/proin/eu/mi/nulla/ac/enim.png&#34;,&#34;Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur&#34;</code></pre></div>
+
+<h3 class="relative group">Conclusion
+    <div id="conclusion" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#conclusion" aria-label="Anchor">#</a>
+    </span>
+    
+</h3>
+<p>In many Salesforce projects, I have observed a lack of error management and user reporting features, which I wanted to demonstrate simply in this project. You may be able to use Salesforce screens to load 100-200 pieces of data, but the real challenge lies in seamlessly transferring thousands of pieces of information into Salesforce. With this blog, you will at least have a better understanding of what to do in the event of an error.</p>
+<p>Happy coding!</p>
+
+          
+          
+          
+        </div>
+        
+        
+
+        
+
+        
+
+      </div>
+    </section>
+
+    
+    <footer class="pt-8 max-w-prose print:hidden">
+      
+  
+    
+    
+    
+    <div class="pt-8">
+      <hr class="border-dotted border-neutral-300 dark:border-neutral-600">
+      <div class="flex justify-between pt-3">
+        <span class="flex flex-col">
+          
+            <a
+              class="flex text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
+              href="/blog/apache-camel-opcua-connectivity-wtih-plc4x/">
+              <span class="leading-6">
+                <span class="inline-block rtl:rotate-180">&larr;</span>&ensp;OPC UA Connectivity with Apache Camel and Apache PLC4X
+              </span>
+            </a>
+            
+              <span class="ms-6 mt-1 text-xs text-neutral-500 dark:text-neutral-400">
+                <time datetime="2026-02-15T19:07:25&#43;01:00">February 15, 2026</time>
+              </span>
+            
+          
+        </span>
+        <span class="flex flex-col items-end">
+          
+        </span>
+      </div>
+    </div>
+  
+
+
+      
+    </footer>
+  </article>
+
+        
+
+
+  
+
+
+
+
+
+
+<div
+  id="scroll-to-top"
+  class="fixed bottom-6 end-6 z-50 transform translate-y-4 opacity-0 duration-200">
+  <a
+    href="#the-top"
+    class="pointer-events-auto flex h-12 w-12 items-center justify-center rounded-full bg-neutral/50 text-xl text-neutral-700 hover:text-primary-600 dark:bg-neutral-800/50 dark:text-neutral dark:hover:text-primary-400"
+    aria-label="Scroll to top"
+    title="Scroll to top">
+    &uarr;
+  </a>
+</div>
+
+      </main><footer id="site-footer" class="py-10 print:hidden">
+  
+  
+    
+  
+  <div class="flex items-center justify-between">
+    
+    
+      <p class="text-sm text-neutral-500 dark:text-neutral-400">
+          &copy;
+          2026
+          
+      </p>
+    
+
+    
+    
+      <p class="text-xs text-neutral-500 dark:text-neutral-400">
+        
+        
+        Powered by <a class="hover:underline hover:decoration-primary-400 hover:text-primary-500"
+          href="https://gohugo.io/" target="_blank" rel="noopener noreferrer">Hugo</a> &amp; <a class="hover:underline hover:decoration-primary-400 hover:text-primary-500"
+          href="https://blowfish.page/" target="_blank" rel="noopener noreferrer">Blowfish</a>
+      </p>
+    
+  </div>
+  
+    <script>
+      mediumZoom(document.querySelectorAll("img:not(.nozoom)"), {
+        margin: 24,
+        background: "rgba(0,0,0,0.5)",
+        scrollOffset: 0,
+      });
+    </script>
+  
+  
+  
+</footer>
+<div
+  id="search-wrapper"
+  class="invisible fixed inset-0 flex h-screen w-screen cursor-default flex-col bg-neutral-500/50 p-4 backdrop-blur-sm dark:bg-neutral-900/50 sm:p-6 md:p-[10vh] lg:p-[12vh] z-500"
+  data-url="https://sedatgoc.com/">
+  <div
+    id="search-modal"
+    class="flex flex-col w-full max-w-3xl min-h-0 mx-auto border rounded-md shadow-lg top-20 border-neutral-200 bg-neutral dark:border-neutral-700 dark:bg-neutral-800">
+    <header class="relative z-10 flex items-center justify-between flex-none px-2">
+      <form class="flex items-center flex-auto min-w-0">
+        <div class="flex items-center justify-center w-8 h-8 text-neutral-400">
+          <span class="relative block icon"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+</span>
+        </div>
+        <input
+          type="search"
+          id="search-query"
+          class="flex flex-auto h-12 mx-1 bg-transparent appearance-none focus:outline-dotted focus:outline-2 focus:outline-transparent"
+          placeholder="Search"
+          tabindex="0">
+      </form>
+      <button
+        id="close-search-button"
+        class="flex items-center justify-center w-8 h-8 text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
+        title="Close (Esc)">
+        <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path fill="currentColor" d="M310.6 361.4c12.5 12.5 12.5 32.75 0 45.25C304.4 412.9 296.2 416 288 416s-16.38-3.125-22.62-9.375L160 301.3L54.63 406.6C48.38 412.9 40.19 416 32 416S15.63 412.9 9.375 406.6c-12.5-12.5-12.5-32.75 0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-105.4 105.4L310.6 361.4z"/></svg>
+</span>
+      </button>
+    </header>
+    <section class="flex-auto px-2 overflow-auto">
+      <ul id="search-results">
+        
+      </ul>
+    </section>
+  </div>
+</div>
+
+    </div>
+  </body>
+  
+</html>
