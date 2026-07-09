@@ -7,7 +7,17 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>© 2026 </copyright>
-    <lastBuildDate>Wed, 04 Mar 2026 22:58:00 +0100</lastBuildDate><atom:link href="https://sedatgoc.com/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 09 Jul 2026 00:00:00 +0100</lastBuildDate><atom:link href="https://sedatgoc.com/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Boomi OFTP2 Connectivity with Trading Partner Management</title>
+      <link>https://sedatgoc.com/blog/boomi-trading-partner-management-connectivity-with-oftp2/</link>
+      <pubDate>Thu, 09 Jul 2026 00:00:00 +0100</pubDate>
+      
+      <guid>https://sedatgoc.com/blog/boomi-trading-partner-management-connectivity-with-oftp2/</guid>
+      <description>&lt;p&gt;If you have ever worked with B2B integration in the automotive world, you already know that OFTP2 is not just another file transfer protocol you can shrug off. It sits at the core of how manufacturers, suppliers, and logistics partners exchange EDI messages, engineering data, and shipping documents every single day. And once your list of trading partners grows past a handful, keeping track of who connects how, with which certificates, over which protocol, quickly turns into its own kind of headache.&lt;/p&gt;</description>
+      
+    </item>
     
     <item>
       <title>Salesforce Bulk API 2.0 Integration with Apache Camel</title>

@@ -35,19 +35,19 @@
 
   
   <meta property="og:url" content="https://sedatgoc.com/blog/apache-camel-opcua-connectivity-wtih-plc4x/">
-  <meta property="og:site_name" content="Sedat Goc">
-  <meta property="og:title" content="OPC UA Connectivity with Apache Camel and Apache PLC4X">
-  <meta property="og:description" content="OPC UA Connectivity with Apache Camel and Apache PLC4X">
-  <meta property="og:locale" content="en_us">
-  <meta property="og:type" content="article">
-    <meta property="article:section" content="blog">
-    <meta property="article:published_time" content="2026-02-15T19:07:25+01:00">
-    <meta property="article:modified_time" content="2026-02-15T19:07:25+01:00">
+	<meta property="og:site_name" content="Sedat Goc">
+	<meta property="og:title" content="OPC UA Connectivity with Apache Camel and Apache PLC4X">
+	<meta property="og:description" content="OPC UA Connectivity with Apache Camel and Apache PLC4X">
+	<meta property="og:locale" content="en_us">
+	<meta property="og:type" content="article">
+		<meta property="article:section" content="blog">
+		<meta property="article:published_time" content="2026-02-15T19:07:25+01:00">
+		<meta property="article:modified_time" content="2026-02-15T19:07:25+01:00">
 
   
-  <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="OPC UA Connectivity with Apache Camel and Apache PLC4X">
-  <meta name="twitter:description" content="OPC UA Connectivity with Apache Camel and Apache PLC4X">
+	<meta name="twitter:card" content="summary">
+	<meta name="twitter:title" content="OPC UA Connectivity with Apache Camel and Apache PLC4X">
+	<meta name="twitter:description" content="OPC UA Connectivity with Apache Camel and Apache PLC4X">
 
   
   
@@ -828,25 +828,25 @@
 <p>So, how can we define and use these values in a Camel Router?</p>
 <p>Before to write a router for consumer, you need to define your NodeIds which you want to consume into a Map. Every NodeId has a NamespaceIndex and Identifier. I&rsquo;ll use Random and Counter NodeIDs for this example;</p>
 <table>
-  <thead>
-      <tr>
-          <th>NodeId</th>
-          <th>Namespace</th>
-          <th>Identifier</th>
-      </tr>
-  </thead>
-  <tbody>
-      <tr>
-          <td>Counter</td>
-          <td>ns=3</td>
-          <td>i=1001</td>
-      </tr>
-      <tr>
-          <td>Random</td>
-          <td>ns=3</td>
-          <td>i=1002</td>
-      </tr>
-  </tbody>
+	<thead>
+			<tr>
+					<th>NodeId</th>
+					<th>Namespace</th>
+					<th>Identifier</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td>Counter</td>
+					<td>ns=3</td>
+					<td>i=1001</td>
+			</tr>
+			<tr>
+					<td>Random</td>
+					<td>ns=3</td>
+					<td>i=1002</td>
+			</tr>
+	</tbody>
 </table>
 <div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#f92672">package</span> io.rsg.apache.camel.learn;
 </span></span><span style="display:flex;"><span>

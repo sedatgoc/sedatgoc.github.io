@@ -1,0 +1,1463 @@
+<!doctype html>
+<html
+  lang="en-us"
+  dir="ltr"
+  class="scroll-smooth"
+  data-default-appearance="light"
+  data-auto-appearance="true"><head>
+  <meta charset="utf-8">
+  
+    <meta http-equiv="content-language" content="en-us">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="theme-color">
+
+  
+  
+    <title>Boomi OFTP2 Connectivity with Trading Partner Management &middot; Sedat Goc</title>
+    <meta name="title" content="Boomi OFTP2 Connectivity with Trading Partner Management &middot; Sedat Goc">
+  
+
+  
+  
+    <meta name="description" content="Boomi OFTP2 Connectivity with Trading Partner Management">
+  
+  
+  
+  
+  <link rel="canonical" href="https://sedatgoc.com/blog/boomi-trading-partner-management-connectivity-with-oftp2/">
+  
+
+  
+  
+  
+
+  
+  <meta property="og:url" content="https://sedatgoc.com/blog/boomi-trading-partner-management-connectivity-with-oftp2/">
+	<meta property="og:site_name" content="Sedat Goc">
+	<meta property="og:title" content="Boomi OFTP2 Connectivity with Trading Partner Management">
+	<meta property="og:description" content="Boomi OFTP2 Connectivity with Trading Partner Management">
+	<meta property="og:locale" content="en_us">
+	<meta property="og:type" content="article">
+		<meta property="article:section" content="blog">
+		<meta property="article:published_time" content="2026-07-09T00:00:00+01:00">
+		<meta property="article:modified_time" content="2026-07-09T00:00:00+01:00">
+
+  
+	<meta name="twitter:card" content="summary">
+	<meta name="twitter:title" content="Boomi OFTP2 Connectivity with Trading Partner Management">
+	<meta name="twitter:description" content="Boomi OFTP2 Connectivity with Trading Partner Management">
+
+  
+  
+  
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+  
+    
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+  
+  
+  
+  
+  
+  
+  
+    
+  
+  
+  <link
+    type="text/css"
+    rel="stylesheet"
+    href="/css/main.bundle.min.135b419383463b826720e4eca9b8c4ec1520fb69ad49740df123cc65e25c462d246f60281936bf4f537859445abd47616998b7c09a771d915f8f1155d124a008.css"
+    integrity="sha512-E1tBk4NGO4JnIOTsqbjE7BUg&#43;2mtSXQN8SPMZeJcRi0kb2AoGTa/T1N4WURavUdhaZi3wJp3HZFfjxFV0SSgCA==">
+
+  
+  
+  <script
+    type="text/javascript"
+    src="/js/appearance.min.6f41174b3a05b680820fe08cadbfa5fb7a7ca347b76a0955cdc68b9d8aca1ce24f0547e138cea33bcc7904d551a90afcb1cc7f2d9fe8557075d501419046c08c.js"
+    integrity="sha512-b0EXSzoFtoCCD&#43;CMrb&#43;l&#43;3p8o0e3aglVzcaLnYrKHOJPBUfhOM6jO8x5BNVRqQr8scx/LZ/oVXB11QFBkEbAjA=="></script>
+  
+  
+  
+  
+  
+  
+    
+    <script src="/lib/zoom/zoom.min.umd.a527109b68c082a70f3697716dd72a9d5aa8b545cf800cecbbc7399f2ca6f6e0ce3e431f2062b48bbfa47c9ea42822714060bef309be073f49b9c0e30d318d7b.js" integrity="sha512-pScQm2jAgqcPNpdxbdcqnVqotUXPgAzsu8c5nyym9uDOPkMfIGK0i7&#43;kfJ6kKCJxQGC&#43;8wm&#43;Bz9JucDjDTGNew=="></script>
+  
+
+  
+  
+  
+    
+  
+  
+    
+  
+  
+  
+  
+  
+  
+    
+    <script
+      defer
+      type="text/javascript"
+      id="script-bundle"
+      src="/js/main.bundle.min.858f7f82734cfae08d59fcf8d0eb186f01706a84e2f7d20d39edfd7bc8bed6166e02d5c65ecce1de82b1ac52d1e01d77bd1a82d19186fdae5fe6e12d867fcf68.js"
+      integrity="sha512-hY9/gnNM&#43;uCNWfz40OsYbwFwaoTi99INOe39e8i&#43;1hZuAtXGXszh3oKxrFLR4B13vRqC0ZGG/a5f5uEthn/PaA=="
+      data-copy="Copy"
+      data-copied="Copied"></script>
+  
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" href="/favicon.ico">
+    <link rel="manifest" href="/site.webmanifest">
+  
+
+  
+  <script type="application/ld+json">
+  [{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "articleSection": "Blogs",
+    "name": "Boomi OFTP2 Connectivity with Trading Partner Management",
+    "headline": "Boomi OFTP2 Connectivity with Trading Partner Management",
+    "description": "Boomi OFTP2 Connectivity with Trading Partner Management",
+    "inLanguage": "en-us",
+    "url" : "https://sedatgoc.com/blog/boomi-trading-partner-management-connectivity-with-oftp2/",
+    "author" : {
+      "@type": "Person",
+      "name": ""
+    },
+    "copyrightYear": "2026",
+    "dateCreated": "2026-07-09T00:00:00\u002b01:00",
+    "datePublished": "2026-07-09T00:00:00\u002b01:00",
+    
+    "dateModified": "2026-07-09T00:00:00\u002b01:00",
+    
+    
+    
+    "mainEntityOfPage": "true",
+    "wordCount": "1598"
+  }]
+  </script>
+
+
+
+  
+  
+    
+
+
+
+
+  
+
+  
+  
+
+  
+  
+
+  
+  
+</head>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <body class="flex flex-col h-screen m-auto leading-7 max-w-7xl px-6 sm:px-14 md:px-24 lg:px-32 text-lg bg-neutral text-neutral-900 dark:bg-neutral-800 dark:text-neutral bf-scrollbar">
+    <div id="the-top" class="absolute flex self-center">
+      <a
+        class="px-3 py-1 text-sm -translate-y-8 rounded-b-lg bg-primary-200 focus:translate-y-0 dark:bg-neutral-600"
+        href="#main-content">
+        <span class="font-bold text-primary-600 pe-2 dark:text-primary-400">&darr;</span>
+        Skip to main content
+      </a>
+    </div>
+    
+    
+      <div class="main-menu flex items-center w-full gap-2 p-1 pl-0">
+  
+  
+    <a href="/" class="text-base font-medium truncate min-w-0 shrink">
+      Sedat Goc
+    </a>
+  
+  <div class="flex items-center ms-auto">
+    <div class="hidden md:flex">
+      <nav class="flex items-center gap-x-5 h-12">
+  
+    
+      
+  
+    <a
+      href="/blog/"
+      
+      class="flex items-center bf-icon-color-hover"
+      aria-label="Blog"
+      title="Blogs">
+      
+      
+        <span class="text-base font-medium break-normal">
+          Blog
+        </span>
+      
+    </a>
+  
+
+    
+      
+  
+    <a
+      href="https://github.com/sedatgoc"
+      
+        target="_blank"
+      
+      class="flex items-center bf-icon-color-hover"
+      aria-label="GitHub"
+      title="">
+      
+        <span class="mr-1">
+          <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path fill="currentColor" d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+</span>
+        </span>
+      
+      
+        <span class="text-base font-medium break-normal">
+          GitHub
+        </span>
+      
+    </a>
+  
+
+    
+  
+
+  
+
+  
+
+  
+    <button
+      id="search-button"
+      aria-label="Search"
+      class="text-base bf-icon-color-hover"
+      title="Search (/)">
+      <span class="relative block icon"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+</span>
+    </button>
+  
+
+  
+    <div class="flex items-center">
+      <button
+        id="appearance-switcher"
+        aria-label="Dark mode switcher"
+        type="button"
+        class="text-base bf-icon-color-hover">
+        <div class="flex items-center justify-center dark:hidden">
+          <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M32 256c0-123.8 100.3-224 223.8-224c11.36 0 29.7 1.668 40.9 3.746c9.616 1.777 11.75 14.63 3.279 19.44C245 86.5 211.2 144.6 211.2 207.8c0 109.7 99.71 193 208.3 172.3c9.561-1.805 16.28 9.324 10.11 16.95C387.9 448.6 324.8 480 255.8 480C132.1 480 32 379.6 32 256z"/></svg>
+</span>
+        </div>
+        <div class="items-center justify-center hidden dark:flex">
+          <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M256 159.1c-53.02 0-95.1 42.98-95.1 95.1S202.1 351.1 256 351.1s95.1-42.98 95.1-95.1S309 159.1 256 159.1zM509.3 347L446.1 255.1l63.15-91.01c6.332-9.125 1.104-21.74-9.826-23.72l-109-19.7l-19.7-109c-1.975-10.93-14.59-16.16-23.72-9.824L256 65.89L164.1 2.736c-9.125-6.332-21.74-1.107-23.72 9.824L121.6 121.6L12.56 141.3C1.633 143.2-3.596 155.9 2.736 164.1L65.89 256l-63.15 91.01c-6.332 9.125-1.105 21.74 9.824 23.72l109 19.7l19.7 109c1.975 10.93 14.59 16.16 23.72 9.824L256 446.1l91.01 63.15c9.127 6.334 21.75 1.107 23.72-9.822l19.7-109l109-19.7C510.4 368.8 515.6 356.1 509.3 347zM256 383.1c-70.69 0-127.1-57.31-127.1-127.1c0-70.69 57.31-127.1 127.1-127.1s127.1 57.3 127.1 127.1C383.1 326.7 326.7 383.1 256 383.1z"/></svg>
+</span>
+        </div>
+      </button>
+    </div>
+  
+</nav>
+
+
+
+    </div>
+    <div class="flex md:hidden">
+      <div class="flex items-center h-14 gap-4">
+  
+    <button
+      id="search-button-mobile"
+      aria-label="Search"
+      class="flex items-center justify-center bf-icon-color-hover"
+      title="Search (/)">
+      <span class="relative block icon"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+</span>
+    </button>
+  
+
+  
+    <button
+      id="appearance-switcher-mobile"
+      type="button"
+      aria-label="Dark mode switcher"
+      class="flex items-center justify-center text-neutral-900 hover:text-primary-600 dark:text-neutral-200 dark:hover:text-primary-400">
+      <div class="dark:hidden">
+        <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M32 256c0-123.8 100.3-224 223.8-224c11.36 0 29.7 1.668 40.9 3.746c9.616 1.777 11.75 14.63 3.279 19.44C245 86.5 211.2 144.6 211.2 207.8c0 109.7 99.71 193 208.3 172.3c9.561-1.805 16.28 9.324 10.11 16.95C387.9 448.6 324.8 480 255.8 480C132.1 480 32 379.6 32 256z"/></svg>
+</span>
+      </div>
+      <div class="hidden dark:block">
+        <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M256 159.1c-53.02 0-95.1 42.98-95.1 95.1S202.1 351.1 256 351.1s95.1-42.98 95.1-95.1S309 159.1 256 159.1zM509.3 347L446.1 255.1l63.15-91.01c6.332-9.125 1.104-21.74-9.826-23.72l-109-19.7l-19.7-109c-1.975-10.93-14.59-16.16-23.72-9.824L256 65.89L164.1 2.736c-9.125-6.332-21.74-1.107-23.72 9.824L121.6 121.6L12.56 141.3C1.633 143.2-3.596 155.9 2.736 164.1L65.89 256l-63.15 91.01c-6.332 9.125-1.105 21.74 9.824 23.72l109 19.7l19.7 109c1.975 10.93 14.59 16.16 23.72 9.824L256 446.1l91.01 63.15c9.127 6.334 21.75 1.107 23.72-9.822l19.7-109l109-19.7C510.4 368.8 515.6 356.1 509.3 347zM256 383.1c-70.69 0-127.1-57.31-127.1-127.1c0-70.69 57.31-127.1 127.1-127.1s127.1 57.3 127.1 127.1C383.1 326.7 326.7 383.1 256 383.1z"/></svg>
+</span>
+      </div>
+    </button>
+  
+
+  
+    <input type="checkbox" id="mobile-menu-toggle" autocomplete="off" class="hidden peer">
+    <label for="mobile-menu-toggle" class="flex items-center justify-center cursor-pointer bf-icon-color-hover">
+      <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M0 96C0 78.33 14.33 64 32 64H416C433.7 64 448 78.33 448 96C448 113.7 433.7 128 416 128H32C14.33 128 0 113.7 0 96zM0 256C0 238.3 14.33 224 32 224H416C433.7 224 448 238.3 448 256C448 273.7 433.7 288 416 288H32C14.33 288 0 273.7 0 256zM416 448H32C14.33 448 0 433.7 0 416C0 398.3 14.33 384 32 384H416C433.7 384 448 398.3 448 416C448 433.7 433.7 448 416 448z"/></svg>
+</span>
+    </label>
+
+    <div
+      role="dialog"
+      aria-modal="true"
+      style="scrollbar-gutter: stable;"
+      class="fixed inset-0 z-50 invisible overflow-y-auto px-6 py-20 opacity-0 transition-[opacity,visibility] duration-300 peer-checked:visible peer-checked:opacity-100 bg-neutral-50/97 dark:bg-neutral-900/99
+      bf-scrollbar">
+      <label
+        for="mobile-menu-toggle"
+        class="fixed end-8 top-5 flex items-center justify-center z-50 h-12 w-12 cursor-pointer select-none rounded-full bf-icon-color-hover border bf-border-color bf-border-color-hover bg-neutral-50 dark:bg-neutral-900">
+        <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path fill="currentColor" d="M310.6 361.4c12.5 12.5 12.5 32.75 0 45.25C304.4 412.9 296.2 416 288 416s-16.38-3.125-22.62-9.375L160 301.3L54.63 406.6C48.38 412.9 40.19 416 32 416S15.63 412.9 9.375 406.6c-12.5-12.5-12.5-32.75 0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-105.4 105.4L310.6 361.4z"/></svg>
+</span>
+      </label>
+      <nav class="mx-auto max-w-md space-y-6">
+        
+  
+    
+    <div class="px-2">
+      <a
+        href="/blog/"
+        aria-label="Blog"
+        
+        class="flex items-center gap-4 group bf-icon-color-hover text-neutral-700 dark:text-neutral-200">
+        
+        <span title="Blogs" class="text-2xl font-bold tracking-tight">
+          Blog
+        </span>
+        
+      </a>
+
+      
+    </div>
+  
+    
+    <div class="px-2">
+      <a
+        href="https://github.com/sedatgoc"
+        aria-label="GitHub"
+        
+          target="_blank"
+        
+        class="flex items-center gap-4 group bf-icon-color-hover text-neutral-700 dark:text-neutral-200">
+        
+          <span class="flex items-center justify-center h-8 w-8 text-2xl">
+            <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path fill="currentColor" d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+</span>
+          </span>
+        
+        <span title="" class="text-2xl font-bold tracking-tight">
+          GitHub
+        </span>
+        
+      </a>
+
+      
+    </div>
+  
+
+        
+  
+
+        
+  
+
+      </nav>
+    </div>
+  
+</div>
+
+
+
+
+
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+    
+    <div class="relative flex flex-col grow">
+      <main id="main-content" class="grow">
+        
+  
+  <article>
+    
+    
+
+    
+    <header id="single_header" class="mt-5 max-w-prose">
+      
+      <h1 class="mt-0 text-4xl font-extrabold text-neutral-900 dark:text-neutral">
+        Boomi OFTP2 Connectivity with Trading Partner Management
+      </h1>
+      <div class="mt-1 mb-6 text-base text-neutral-500 dark:text-neutral-400 print:hidden">
+        
+
+
+
+
+
+  
+  
+
+
+
+  
+
+  
+  
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+  <div class="flex flex-row flex-wrap items-center">
+    
+    
+      <time datetime="2026-07-09T00:00:00&#43;01:00">July 9, 2026</time><span class="px-2 text-primary-500">&middot;</span><span>1598 words</span><span class="px-2 text-primary-500">&middot;</span><span title="Reading time">8 mins</span>
+    
+
+    
+    
+  </div>
+
+  
+
+  
+  
+
+  
+  
+
+
+
+      </div>
+      
+        
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+    
+    
+<div class="flex author">
+  
+  <div class="place-self-center">
+    
+    
+    <div class="text-2xl sm:text-lg">
+</div>
+  </div>
+</div>
+
+  
+
+  
+
+  
+    <div class="mb-5"></div>
+  
+
+      
+    </header>
+
+    
+    <section class="flex flex-col max-w-full mt-0 prose dark:prose-invert lg:flex-row">
+      
+      
+      
+      
+      
+
+
+      <div class="min-w-0 min-h-0 max-w-fit">
+        
+
+        <div class="article-content max-w-prose mb-20">
+          <p>If you have ever worked with B2B integration in the automotive world, you already know that OFTP2 is not just another file transfer protocol you can shrug off. It sits at the core of how manufacturers, suppliers, and logistics partners exchange EDI messages, engineering data, and shipping documents every single day. And once your list of trading partners grows past a handful, keeping track of who connects how, with which certificates, over which protocol, quickly turns into its own kind of headache.</p>
+<p>This is where Boomi&rsquo;s Trading Partner Management comes into the picture. Instead of hard-coding connection details into every process or juggling scattered configuration files, Boomi lets you model each partner as a first-class object: their communication method, security settings, document standards, and routing rules all live in one place. Pair that with native OFTP2 support, and you get a setup where onboarding a new partner or troubleshooting a failed transfer becomes a matter of checking a clear, structured configuration rather than digging through logs and guesswork.
+In this post, we will walk through how Boomi handles Trading Partner Management and how OFTP2 fits into that model. Before we get into the technical details and actual configuration, it helps to understand why this combination matters and what problems it is actually solving.</p>
+
+<h3 class="relative group">Project prerequisites &amp; configuration
+    <div id="project-prerequisites--configuration" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#project-prerequisites--configuration" aria-label="Anchor">#</a>
+    </span>
+    
+</h3>
+<p>Before we start, we need to make sure the OFTP2 port is exposed on the runtime. If you already have a Boomi Atom running in Docker, you will just need to add the port mapping to your existing setup. If you are starting from scratch and do not have a configuration yet, the <code>docker-compose</code> file below can be used as a baseline for your Boomi Atom.</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">name</span>: <span style="color:#e6db74">&#34;BoomiAtom-Local&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">version</span>: <span style="color:#e6db74">&#34;3.8&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">services</span>:
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">atom</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">container_name</span>: <span style="color:#ae81ff">boomi_atom-container</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">image</span>: <span style="color:#ae81ff">boomi/atom:5.5.1</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">volumes</span>:
+</span></span><span style="display:flex;"><span>      - <span style="color:#ae81ff">./boomi_docker:/mnt/boomi:Z</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">ports</span>:
+</span></span><span style="display:flex;"><span>      - <span style="color:#e6db74">&#34;9090:9090&#34;</span>
+</span></span><span style="display:flex;"><span>      - <span style="color:#e6db74">&#34;5002:5002&#34;</span>
+</span></span><span style="display:flex;"><span>      - <span style="color:#e6db74">&#34;3305:3305&#34;</span>
+</span></span><span style="display:flex;"><span>      - <span style="color:#e6db74">&#34;6619:6619&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">hostname</span>: <span style="color:#e6db74">&#34;boomi-local-atom-docker&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">environment</span>:
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">INSTALL_TOKEN</span>: <span style="color:#e6db74">&#34;your-atom-installation-token&#34;</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">BOOMI_ATOMNAME</span>: <span style="color:#e6db74">&#34;boomi-local-atom-docker&#34;</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">ATOM_LOCALHOSTID</span>: <span style="color:#e6db74">&#34;boomi-local-atom-docker&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">networks</span>:
+</span></span><span style="display:flex;"><span>      - <span style="color:#ae81ff">boomi-net</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">networks</span>:
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">boomi-net</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">name</span>: <span style="color:#ae81ff">boominet</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">driver</span>: <span style="color:#ae81ff">bridge</span></span></span></code></pre></div></div>
+<p>Once the installation is complete, the next step is to enable the OFTP2 Server on your runtime. For testing purposes, we will use port 3305 and skip the security options for now, since our goal at this stage is simply to get a working connection up and running. Then click &ldquo;Save&rdquo; and restart the OFTP2 plugin.</p>
+<p><figure><img
+    class="my-0 rounded-md"
+    loading="lazy"
+    decoding="async"
+    fetchpriority="auto"
+    alt="Enabling the OFTP2 Server on the Boomi runtime and setting the listener port to 3305"
+    width="2010"
+    height="1380"
+    src="/blog-content/boomi-trading-partner-management-connectivity-with-oftp2/boomi-trading-partner-management-connectivity-with-oftp2-runtime-oftp2-setting_hu_7a1587219639140b.png"
+    srcset="/blog-content/boomi-trading-partner-management-connectivity-with-oftp2/boomi-trading-partner-management-connectivity-with-oftp2-runtime-oftp2-setting_hu_7a1587219639140b.png 800w, /blog-content/boomi-trading-partner-management-connectivity-with-oftp2/boomi-trading-partner-management-connectivity-with-oftp2-runtime-oftp2-setting_hu_c2ebbe8842296646.png 1280w"
+    sizes="(min-width: 768px) 50vw, 65vw"
+    data-zoom-src="/blog-content/boomi-trading-partner-management-connectivity-with-oftp2/boomi-trading-partner-management-connectivity-with-oftp2-runtime-oftp2-setting.png"></figure>
+</p>
+<p>Once the OFTP2 server has started, you will not notice anything unusual in the Boomi Atom backend at first. Everything appears to be running fine. The problem only surfaces later: after you deploy an OFTP2 integration and run your first test, the Atom logs will start showing errors about a missing BouncyCastle library.</p>
+<p><figure><img
+    class="my-0 rounded-md"
+    loading="lazy"
+    decoding="async"
+    fetchpriority="auto"
+    alt="Boomi Atom log showing an error about the missing BouncyCastle cryptographic library"
+    width="2660"
+    height="788"
+    src="/blog-content/boomi-trading-partner-management-connectivity-with-oftp2/boomi-trading-partner-management-connectivity-with-oftp2-bouncycastle-error_hu_61f147af789ccbf2.png"
+    srcset="/blog-content/boomi-trading-partner-management-connectivity-with-oftp2/boomi-trading-partner-management-connectivity-with-oftp2-bouncycastle-error_hu_61f147af789ccbf2.png 800w, /blog-content/boomi-trading-partner-management-connectivity-with-oftp2/boomi-trading-partner-management-connectivity-with-oftp2-bouncycastle-error_hu_b24a6977af89fe73.png 1280w"
+    sizes="(min-width: 768px) 50vw, 65vw"
+    data-zoom-src="/blog-content/boomi-trading-partner-management-connectivity-with-oftp2/boomi-trading-partner-management-connectivity-with-oftp2-bouncycastle-error.png"></figure>
+</p>
+<p>BouncyCastle is the cryptographic library OFTP2 relies on, so without it the integration simply cannot complete the handshake. The good news is that this is an easy fix, and I will walk you through it step by step so you do not have to figure it out on your own.</p>
+<p>Head into Runtime Management and open the Properties of your runtime. Switch to the Advanced tab and add the line below to your configuration.</p>
+<p><figure><img
+    class="my-0 rounded-md"
+    loading="lazy"
+    decoding="async"
+    fetchpriority="auto"
+    alt="Advanced tab of the Boomi runtime properties with the BouncyCastle configuration line added"
+    width="2138"
+    height="1040"
+    src="/blog-content/boomi-trading-partner-management-connectivity-with-oftp2/boomi-trading-partner-management-connectivity-with-oftp2-atom-properties_hu_55f1bf3b7412d9d2.png"
+    srcset="/blog-content/boomi-trading-partner-management-connectivity-with-oftp2/boomi-trading-partner-management-connectivity-with-oftp2-atom-properties_hu_55f1bf3b7412d9d2.png 800w, /blog-content/boomi-trading-partner-management-connectivity-with-oftp2/boomi-trading-partner-management-connectivity-with-oftp2-atom-properties_hu_b52c793b79423db7.png 1280w"
+    sizes="(min-width: 768px) 50vw, 65vw"
+    data-zoom-src="/blog-content/boomi-trading-partner-management-connectivity-with-oftp2/boomi-trading-partner-management-connectivity-with-oftp2-atom-properties.png"></figure>
+</p>
+<p>Once you save this change, the Atom will restart automatically, and BouncyCastle will be loaded on startup. After the restart, your OFTP2 integration should run without the missing library error.</p>
+
+<h3 class="relative group">Mendelson OFTP2 Partner Configuration
+    <div id="mendelson-oftp2-partner-configuration" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#mendelson-oftp2-partner-configuration" aria-label="Anchor">#</a>
+    </span>
+    
+</h3>
+<p>In the Mendelson OFTP2 application, we need to define two entities: a local station and a partner. The local station represents our own side of the exchange (in this scenario, our customer), while the partner definition points to the remote system we want to connect to, which in this case is Boomi.
+To keep the roles clear:</p>
+<p>Local Station: Our Customer
+Partner: Boomi</p>
+<p>Below are the screenshots of my own configuration for both definitions in Mendelson, so you can compare them against your own setup.
+Local Station</p>
+<p>Type: Local Station
+Name: customer
+ODETTE ID: O2010CUSTOMER</p>
+<p><figure><img
+    class="my-0 rounded-md"
+    loading="lazy"
+    decoding="async"
+    fetchpriority="auto"
+    alt="Mendelson OFTP2 local station configuration for the customer with ODETTE ID O2010CUSTOMER"
+    width="1514"
+    height="788"
+    src="/blog-content/boomi-trading-partner-management-connectivity-with-oftp2/boomi-trading-partner-management-connectivity-with-oftp2-mendelson-local-station-configuration-1_hu_9efb6a8ea64bc4a8.png"
+    srcset="/blog-content/boomi-trading-partner-management-connectivity-with-oftp2/boomi-trading-partner-management-connectivity-with-oftp2-mendelson-local-station-configuration-1_hu_9efb6a8ea64bc4a8.png 800w, /blog-content/boomi-trading-partner-management-connectivity-with-oftp2/boomi-trading-partner-management-connectivity-with-oftp2-mendelson-local-station-configuration-1_hu_56808ef019fcc086.png 1280w"
+    sizes="(min-width: 768px) 50vw, 65vw"
+    data-zoom-src="/blog-content/boomi-trading-partner-management-connectivity-with-oftp2/boomi-trading-partner-management-connectivity-with-oftp2-mendelson-local-station-configuration-1.png"></figure>
+</p>
+<p>Partner Configuration (Boomi)</p>
+<ul>
+<li>Type: Remote Partner</li>
+<li>Name: boomitest</li>
+<li>ODETTE ID: O1999BOOMIES</li>
+<li>Host: Boomi Atom hostname</li>
+<li>Port: 3305</li>
+<li>Password: set a password (maximum length of 8 characters)</li>
+</ul>
+<p><figure><img
+    class="my-0 rounded-md"
+    loading="lazy"
+    decoding="async"
+    fetchpriority="auto"
+    alt="Mendelson OFTP2 remote partner configuration for Boomi with host, port and ODETTE ID"
+    width="2092"
+    height="830"
+    src="/blog-content/boomi-trading-partner-management-connectivity-with-oftp2/boomi-trading-partner-management-connectivity-with-oftp2-mendelson-remote-partner-configuration-1_hu_bb1c498d209317bc.png"
+    srcset="/blog-content/boomi-trading-partner-management-connectivity-with-oftp2/boomi-trading-partner-management-connectivity-with-oftp2-mendelson-remote-partner-configuration-1_hu_bb1c498d209317bc.png 800w, /blog-content/boomi-trading-partner-management-connectivity-with-oftp2/boomi-trading-partner-management-connectivity-with-oftp2-mendelson-remote-partner-configuration-1_hu_cf44b6cb71b879e3.png 1280w"
+    sizes="(min-width: 768px) 50vw, 65vw"
+    data-zoom-src="/blog-content/boomi-trading-partner-management-connectivity-with-oftp2/boomi-trading-partner-management-connectivity-with-oftp2-mendelson-remote-partner-configuration-1.png"></figure>
+</p>
+<p><figure><img
+    class="my-0 rounded-md"
+    loading="lazy"
+    decoding="async"
+    fetchpriority="auto"
+    alt="Additional Mendelson remote partner settings for the Boomi connection, including the OFTP2 password"
+    width="2172"
+    height="1208"
+    src="/blog-content/boomi-trading-partner-management-connectivity-with-oftp2/boomi-trading-partner-management-connectivity-with-oftp2-mendelson-remote-partner-configuration-2_hu_798d3dfee18cf643.png"
+    srcset="/blog-content/boomi-trading-partner-management-connectivity-with-oftp2/boomi-trading-partner-management-connectivity-with-oftp2-mendelson-remote-partner-configuration-2_hu_798d3dfee18cf643.png 800w, /blog-content/boomi-trading-partner-management-connectivity-with-oftp2/boomi-trading-partner-management-connectivity-with-oftp2-mendelson-remote-partner-configuration-2_hu_f46dcf74494cbd0f.png 1280w"
+    sizes="(min-width: 768px) 50vw, 65vw"
+    data-zoom-src="/blog-content/boomi-trading-partner-management-connectivity-with-oftp2/boomi-trading-partner-management-connectivity-with-oftp2-mendelson-remote-partner-configuration-2.png"></figure>
+</p>
+<p>One detail worth highlighting: the OFTP2 password is limited to a maximum of 8 characters, so keep that constraint in mind when setting it up.</p>
+<p>Once both definitions are in place, run a test connection from Mendelson. If everything is configured correctly, you should see a window confirming a successful response from Boomi, like the one below.</p>
+<p><figure><img
+    class="my-0 rounded-md"
+    loading="lazy"
+    decoding="async"
+    fetchpriority="auto"
+    alt="Mendelson window confirming a successful OFTP2 test connection to Boomi"
+    width="1948"
+    height="1218"
+    src="/blog-content/boomi-trading-partner-management-connectivity-with-oftp2/boomi-trading-partner-management-connectivity-with-oftp2-mendelson-remote-partner-test-connection-3_hu_690f1794df4fa726.png"
+    srcset="/blog-content/boomi-trading-partner-management-connectivity-with-oftp2/boomi-trading-partner-management-connectivity-with-oftp2-mendelson-remote-partner-test-connection-3_hu_690f1794df4fa726.png 800w, /blog-content/boomi-trading-partner-management-connectivity-with-oftp2/boomi-trading-partner-management-connectivity-with-oftp2-mendelson-remote-partner-test-connection-3_hu_283b000195e1cf02.png 1280w"
+    sizes="(min-width: 768px) 50vw, 65vw"
+    data-zoom-src="/blog-content/boomi-trading-partner-management-connectivity-with-oftp2/boomi-trading-partner-management-connectivity-with-oftp2-mendelson-remote-partner-test-connection-3.png"></figure>
+</p>
+<p>If you run into errors instead, it is usually something on the connectivity side. Double-check the obvious suspects first: firewall rules, the port number, the hostname, and any missing libraries such as BouncyCastle from the earlier step.</p>
+
+<h3 class="relative group">Trading Partner Management Configuration
+    <div id="trading-partner-management-configuration" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#trading-partner-management-configuration" aria-label="Anchor">#</a>
+    </span>
+    
+</h3>
+<p>If you have completed the previous steps correctly, we can now move on to creating the Trading Partner details in Boomi.</p>
+<p><figure><img
+    class="my-0 rounded-md"
+    loading="lazy"
+    decoding="async"
+    fetchpriority="auto"
+    alt="Boomi Trading Partner Management menu"
+    width="1400"
+    height="764"
+    src="/blog-content/boomi-trading-partner-management-connectivity-with-oftp2/boomi-trading-partner-management-connectivity-with-oftp2-trading-partner-menu_hu_30e06309ca0e6085.png"
+    srcset="/blog-content/boomi-trading-partner-management-connectivity-with-oftp2/boomi-trading-partner-management-connectivity-with-oftp2-trading-partner-menu_hu_30e06309ca0e6085.png 800w, /blog-content/boomi-trading-partner-management-connectivity-with-oftp2/boomi-trading-partner-management-connectivity-with-oftp2-trading-partner-menu_hu_52932941781a835b.png 1280w"
+    sizes="(min-width: 768px) 50vw, 65vw"
+    data-zoom-src="/blog-content/boomi-trading-partner-management-connectivity-with-oftp2/boomi-trading-partner-management-connectivity-with-oftp2-trading-partner-menu.png"></figure>
+</p>
+<p>Click the Add a Trading Partner option and fill in the following:</p>
+<ul>
+<li>Type: Trading Partner</li>
+<li>Standard: ODETTE</li>
+<li>Options: This is my company</li>
+</ul>
+<p>That last option deserves special attention. It is easy to get confused here because the same relationship is modeled from opposite directions in the two tools. In Boomi, the profile we are creating represents our trading partner, whereas in Mendelson this same entity was defined as the remote partner. Keep this mirrored perspective in mind as you go, since mixing up the two sides is one of the most common sources of misconfiguration.</p>
+<p><figure><img
+    class="my-0 rounded-md"
+    loading="lazy"
+    decoding="async"
+    fetchpriority="auto"
+    alt="Add a Trading Partner dialog in Boomi with type Trading Partner and ODETTE standard selected"
+    width="1250"
+    height="646"
+    src="/blog-content/boomi-trading-partner-management-connectivity-with-oftp2/boomi-trading-partner-management-connectivity-with-oftp2-trading-partner-add-a-trading-partner_hu_72d3fc2f691436d.png"
+    srcset="/blog-content/boomi-trading-partner-management-connectivity-with-oftp2/boomi-trading-partner-management-connectivity-with-oftp2-trading-partner-add-a-trading-partner_hu_72d3fc2f691436d.png 800w, /blog-content/boomi-trading-partner-management-connectivity-with-oftp2/boomi-trading-partner-management-connectivity-with-oftp2-trading-partner-add-a-trading-partner.png 1280w"
+    sizes="(min-width: 768px) 50vw, 65vw"
+    data-zoom-src="/blog-content/boomi-trading-partner-management-connectivity-with-oftp2/boomi-trading-partner-management-connectivity-with-oftp2-trading-partner-add-a-trading-partner.png"></figure>
+</p>
+<p>Once the trading partner is created, we need to fill in a few more details to complete the Boomi connection.
+For the full reference, see Boomi&rsquo;s documentation: <a href="https://help.boomi.com/docs/Atomsphere/Integration/Process%20building/int-Trading_Partner_ODETTE_Standard_tab_51d64a3e-ac24-427b-9b21-33a9e41ac301"  target="_blank" rel="noreferrer">https://help.boomi.com/docs/Atomsphere/Integration/Process%20building/int-Trading_Partner_ODETTE_Standard_tab_51d64a3e-ac24-427b-9b21-33a9e41ac301</a></p>
+<p>#### Overview</p>
+<ul>
+<li>Identifier: O1999BOOMIES</li>
+<li>Organization: You can either select an existing organization or create a new one. In my case, I will use Mendelson.</li>
+</ul>
+<p><figure><img
+    class="my-0 rounded-md"
+    loading="lazy"
+    decoding="async"
+    fetchpriority="auto"
+    alt="Overview tab of the Boomi trading partner showing identifier O1999BOOMIES and the organization"
+    width="2558"
+    height="972"
+    src="/blog-content/boomi-trading-partner-management-connectivity-with-oftp2/boomi-trading-partner-management-connectivity-with-oftp2-boomi-trading-partner-overview-conf_hu_cf8ad36b49331e45.png"
+    srcset="/blog-content/boomi-trading-partner-management-connectivity-with-oftp2/boomi-trading-partner-management-connectivity-with-oftp2-boomi-trading-partner-overview-conf_hu_cf8ad36b49331e45.png 800w, /blog-content/boomi-trading-partner-management-connectivity-with-oftp2/boomi-trading-partner-management-connectivity-with-oftp2-boomi-trading-partner-overview-conf_hu_6a9dee576937d03a.png 1280w"
+    sizes="(min-width: 768px) 50vw, 65vw"
+    data-zoom-src="/blog-content/boomi-trading-partner-management-connectivity-with-oftp2/boomi-trading-partner-management-connectivity-with-oftp2-boomi-trading-partner-overview-conf.png"></figure>
+</p>
+
+<h4 class="relative group">ODETTE Standard
+    <div id="odette-standard" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#odette-standard" aria-label="Anchor">#</a>
+    </span>
+    
+</h4>
+<ul>
+<li>Interchange Identification Options
+<ul>
+<li>Interchange Identification (UNB02/03)
+<ul>
+<li>ID : O1999BOOMIES</li>
+<li>Qualifier : ZZ</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Message Version / Control Options
+<ul>
+<li>Version Number (UNH02:2) : D</li>
+<li>Release Number (UNH02:3) : 96A (I&rsquo;ll use 96A version edi example)</li>
+<li>Controlling Agency (UNH02:4) : UN-UN/ECE/TRADE/WP.4</li>
+</ul>
+</li>
+</ul>
+<p><figure><img
+    class="my-0 rounded-md"
+    loading="lazy"
+    decoding="async"
+    fetchpriority="auto"
+    alt="ODETTE Standard tab of the Boomi trading partner with interchange and message version options"
+    width="2556"
+    height="1540"
+    src="/blog-content/boomi-trading-partner-management-connectivity-with-oftp2/boomi-trading-partner-management-connectivity-with-oftp2-boomi-trading-partner-odette-standard-conf_hu_8b26a5287108aa26.png"
+    srcset="/blog-content/boomi-trading-partner-management-connectivity-with-oftp2/boomi-trading-partner-management-connectivity-with-oftp2-boomi-trading-partner-odette-standard-conf_hu_8b26a5287108aa26.png 800w, /blog-content/boomi-trading-partner-management-connectivity-with-oftp2/boomi-trading-partner-management-connectivity-with-oftp2-boomi-trading-partner-odette-standard-conf_hu_236aa761f19bede8.png 1280w"
+    sizes="(min-width: 768px) 50vw, 65vw"
+    data-zoom-src="/blog-content/boomi-trading-partner-management-connectivity-with-oftp2/boomi-trading-partner-management-connectivity-with-oftp2-boomi-trading-partner-odette-standard-conf.png"></figure>
+</p>
+
+<h4 class="relative group">Communication
+    <div id="communication" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#communication" aria-label="Anchor">#</a>
+    </span>
+    
+</h4>
+<p>In this tab, set the Communication Method to OFTP2.</p>
+<p><figure><img
+    class="my-0 rounded-md"
+    loading="lazy"
+    decoding="async"
+    fetchpriority="auto"
+    alt="Communication tab of the Boomi trading partner with the method set to OFTP2"
+    width="1556"
+    height="972"
+    src="/blog-content/boomi-trading-partner-management-connectivity-with-oftp2/boomi-trading-partner-management-connectivity-with-oftp2-boomi-trading-partner-communication-conf_hu_ab022488b27f56ad.png"
+    srcset="/blog-content/boomi-trading-partner-management-connectivity-with-oftp2/boomi-trading-partner-management-connectivity-with-oftp2-boomi-trading-partner-communication-conf_hu_ab022488b27f56ad.png 800w, /blog-content/boomi-trading-partner-management-connectivity-with-oftp2/boomi-trading-partner-management-connectivity-with-oftp2-boomi-trading-partner-communication-conf_hu_69d3341553dbc165.png 1280w"
+    sizes="(min-width: 768px) 50vw, 65vw"
+    data-zoom-src="/blog-content/boomi-trading-partner-management-connectivity-with-oftp2/boomi-trading-partner-management-connectivity-with-oftp2-boomi-trading-partner-communication-conf.png"></figure>
+</p>
+<p>Here we need to provide the Boomi ODETTE ID and password that we defined earlier in Mendelson. These values must match exactly on both sides, otherwise the connection will fail while sending data.</p>
+<p><figure><img
+    class="my-0 rounded-md"
+    loading="lazy"
+    decoding="async"
+    fetchpriority="auto"
+    alt="Boomi Communication tab with the ODETTE ID and password matching the Mendelson configuration"
+    width="2524"
+    height="1650"
+    src="/blog-content/boomi-trading-partner-management-connectivity-with-oftp2/boomi-trading-partner-management-connectivity-with-oftp2-boomi-trading-partner-communication-conf-1_hu_d05a99d3e371b864.png"
+    srcset="/blog-content/boomi-trading-partner-management-connectivity-with-oftp2/boomi-trading-partner-management-connectivity-with-oftp2-boomi-trading-partner-communication-conf-1_hu_d05a99d3e371b864.png 800w, /blog-content/boomi-trading-partner-management-connectivity-with-oftp2/boomi-trading-partner-management-connectivity-with-oftp2-boomi-trading-partner-communication-conf-1_hu_b1728fdd13d0e9c4.png 1280w"
+    sizes="(min-width: 768px) 50vw, 65vw"
+    data-zoom-src="/blog-content/boomi-trading-partner-management-connectivity-with-oftp2/boomi-trading-partner-management-connectivity-with-oftp2-boomi-trading-partner-communication-conf-1.png"></figure>
+</p>
+<p><figure><img
+    class="my-0 rounded-md"
+    loading="lazy"
+    decoding="async"
+    fetchpriority="auto"
+    alt="Additional OFTP2 communication settings for the Boomi trading partner"
+    width="2470"
+    height="1718"
+    src="/blog-content/boomi-trading-partner-management-connectivity-with-oftp2/boomi-trading-partner-management-connectivity-with-oftp2-boomi-trading-partner-communication-conf-2_hu_3ca163a6937a6ec5.png"
+    srcset="/blog-content/boomi-trading-partner-management-connectivity-with-oftp2/boomi-trading-partner-management-connectivity-with-oftp2-boomi-trading-partner-communication-conf-2_hu_3ca163a6937a6ec5.png 800w, /blog-content/boomi-trading-partner-management-connectivity-with-oftp2/boomi-trading-partner-management-connectivity-with-oftp2-boomi-trading-partner-communication-conf-2_hu_39644b40cf38f6e5.png 1280w"
+    sizes="(min-width: 768px) 50vw, 65vw"
+    data-zoom-src="/blog-content/boomi-trading-partner-management-connectivity-with-oftp2/boomi-trading-partner-management-connectivity-with-oftp2-boomi-trading-partner-communication-conf-2.png"></figure>
+</p>
+<p>With that, we have our first Trading Partner configured in Boomi.</p>
+<p><figure><img
+    class="my-0 rounded-md"
+    loading="lazy"
+    decoding="async"
+    fetchpriority="auto"
+    alt="First Boomi trading partner fully configured"
+    width="3420"
+    height="550"
+    src="/blog-content/boomi-trading-partner-management-connectivity-with-oftp2/boomi-trading-partner-management-connectivity-with-oftp2-boomi-trading-partner-communication-conf-3_hu_625971923cfd9769.png"
+    srcset="/blog-content/boomi-trading-partner-management-connectivity-with-oftp2/boomi-trading-partner-management-connectivity-with-oftp2-boomi-trading-partner-communication-conf-3_hu_625971923cfd9769.png 800w, /blog-content/boomi-trading-partner-management-connectivity-with-oftp2/boomi-trading-partner-management-connectivity-with-oftp2-boomi-trading-partner-communication-conf-3_hu_1b8eb86fb4a7476d.png 1280w"
+    sizes="(min-width: 768px) 50vw, 65vw"
+    data-zoom-src="/blog-content/boomi-trading-partner-management-connectivity-with-oftp2/boomi-trading-partner-management-connectivity-with-oftp2-boomi-trading-partner-communication-conf-3.png"></figure>
+</p>
+<p>Now we need another one for customer definition.</p>
+<p><figure><img
+    class="my-0 rounded-md"
+    loading="lazy"
+    decoding="async"
+    fetchpriority="auto"
+    alt="Overview tab of the customer trading partner in Boomi with identifier O2010CUSTOMER"
+    width="1638"
+    height="798"
+    src="/blog-content/boomi-trading-partner-management-connectivity-with-oftp2/boomi-trading-partner-management-connectivity-with-oftp2-customer-trading-partner-overview-conf_hu_17650cd24a922709.png"
+    srcset="/blog-content/boomi-trading-partner-management-connectivity-with-oftp2/boomi-trading-partner-management-connectivity-with-oftp2-customer-trading-partner-overview-conf_hu_17650cd24a922709.png 800w, /blog-content/boomi-trading-partner-management-connectivity-with-oftp2/boomi-trading-partner-management-connectivity-with-oftp2-customer-trading-partner-overview-conf_hu_2b8c8d055034cc9e.png 1280w"
+    sizes="(min-width: 768px) 50vw, 65vw"
+    data-zoom-src="/blog-content/boomi-trading-partner-management-connectivity-with-oftp2/boomi-trading-partner-management-connectivity-with-oftp2-customer-trading-partner-overview-conf.png"></figure>
+</p>
+<ul>
+<li>Identifier: O2010CUSTOMER</li>
+<li>Organization: You can either select an existing organization or create a new one. In my case, I will use Mendelson.</li>
+</ul>
+<p><figure><img
+    class="my-0 rounded-md"
+    loading="lazy"
+    decoding="async"
+    fetchpriority="auto"
+    alt="ODETTE Standard tab of the customer trading partner with basic ODETTE and interchange options"
+    width="1934"
+    height="1708"
+    src="/blog-content/boomi-trading-partner-management-connectivity-with-oftp2/boomi-trading-partner-management-connectivity-with-oftp2-customer-trading-partner-odette-standard-conf_hu_262ab147547e9fa8.png"
+    srcset="/blog-content/boomi-trading-partner-management-connectivity-with-oftp2/boomi-trading-partner-management-connectivity-with-oftp2-customer-trading-partner-odette-standard-conf_hu_262ab147547e9fa8.png 800w, /blog-content/boomi-trading-partner-management-connectivity-with-oftp2/boomi-trading-partner-management-connectivity-with-oftp2-customer-trading-partner-odette-standard-conf_hu_e92b11a65e3a2b6c.png 1280w"
+    sizes="(min-width: 768px) 50vw, 65vw"
+    data-zoom-src="/blog-content/boomi-trading-partner-management-connectivity-with-oftp2/boomi-trading-partner-management-connectivity-with-oftp2-customer-trading-partner-odette-standard-conf.png"></figure>
+</p>
+<ul>
+<li>Basic ODETTE Options
+<ul>
+<li>CONTRL Acknowledgment Options : Do Not Acknowledge</li>
+<li>Document Envelope Option : Group By Interchange</li>
+<li>Element Delimiter : Plus Delimited</li>
+<li>Segment Termination Character : Single Quote</li>
+<li>Composite Delimiter : Colon</li>
+</ul>
+</li>
+<li>Interchange Identification Options
+<ul>
+<li>Interchange Identification (UNB02/03)
+<ul>
+<li>ID : O1999BOOMIES</li>
+<li>Qualifier : ZZ</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Message Version / Control Options
+<ul>
+<li>Version Number (UNH02:2) : D</li>
+<li>Release Number (UNH02:3) : 96A (I&rsquo;ll use 96A version edi example)</li>
+<li>Controlling Agency (UNH02:4) : UN-UN/ECE/TRADE/WP.4</li>
+</ul>
+</li>
+</ul>
+<p><figure><img
+    class="my-0 rounded-md"
+    loading="lazy"
+    decoding="async"
+    fetchpriority="auto"
+    alt="Communication tab of the customer trading partner in Boomi"
+    width="2522"
+    height="1718"
+    src="/blog-content/boomi-trading-partner-management-connectivity-with-oftp2/boomi-trading-partner-management-connectivity-with-oftp2-customer-trading-partner-communication-conf-1_hu_84ab3d8f772fa60d.png"
+    srcset="/blog-content/boomi-trading-partner-management-connectivity-with-oftp2/boomi-trading-partner-management-connectivity-with-oftp2-customer-trading-partner-communication-conf-1_hu_84ab3d8f772fa60d.png 800w, /blog-content/boomi-trading-partner-management-connectivity-with-oftp2/boomi-trading-partner-management-connectivity-with-oftp2-customer-trading-partner-communication-conf-1_hu_2cfc265c65e61694.png 1280w"
+    sizes="(min-width: 768px) 50vw, 65vw"
+    data-zoom-src="/blog-content/boomi-trading-partner-management-connectivity-with-oftp2/boomi-trading-partner-management-connectivity-with-oftp2-customer-trading-partner-communication-conf-1.png"></figure>
+</p>
+<p>Here we need to provide the Boomi ODETTE ID and password that we defined earlier in Mendelson. These values must match exactly on both sides, otherwise the connection will fail while sending data.</p>
+<p>Now we are ready to build a process with these configurations.</p>
+<p><figure><img
+    class="my-0 rounded-md"
+    loading="lazy"
+    decoding="async"
+    fetchpriority="auto"
+    alt="Both the Boomi and customer trading partners configured and ready in Boomi"
+    width="3416"
+    height="778"
+    src="/blog-content/boomi-trading-partner-management-connectivity-with-oftp2/boomi-trading-partner-management-connectivity-with-oftp2-tradinf-partner-all-ready_hu_8901f06270db8feb.png"
+    srcset="/blog-content/boomi-trading-partner-management-connectivity-with-oftp2/boomi-trading-partner-management-connectivity-with-oftp2-tradinf-partner-all-ready_hu_8901f06270db8feb.png 800w, /blog-content/boomi-trading-partner-management-connectivity-with-oftp2/boomi-trading-partner-management-connectivity-with-oftp2-tradinf-partner-all-ready_hu_99fb868e687883d6.png 1280w"
+    sizes="(min-width: 768px) 50vw, 65vw"
+    data-zoom-src="/blog-content/boomi-trading-partner-management-connectivity-with-oftp2/boomi-trading-partner-management-connectivity-with-oftp2-tradinf-partner-all-ready.png"></figure>
+</p>
+
+<h3 class="relative group">First Integration
+    <div id="first-integration" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#first-integration" aria-label="Anchor">#</a>
+    </span>
+    
+</h3>
+<p>I created a flow with the Trading Partner type. We need to use our definition from the Trading Partner, so we define our Boomi trading partner in the My Standards section.</p>
+<p><figure><img
+    class="my-0 rounded-md"
+    loading="lazy"
+    decoding="async"
+    fetchpriority="auto"
+    alt="Configuring the start step with the Boomi trading partner in the My Standards section"
+    width="1250"
+    height="856"
+    src="/blog-content/boomi-trading-partner-management-connectivity-with-oftp2/boomi-trading-partner-management-connectivity-with-oftp2-start-step-conf-1_hu_57e8c1ce5e965604.png"
+    srcset="/blog-content/boomi-trading-partner-management-connectivity-with-oftp2/boomi-trading-partner-management-connectivity-with-oftp2-start-step-conf-1_hu_57e8c1ce5e965604.png 800w, /blog-content/boomi-trading-partner-management-connectivity-with-oftp2/boomi-trading-partner-management-connectivity-with-oftp2-start-step-conf-1.png 1280w"
+    sizes="(min-width: 768px) 50vw, 65vw"
+    data-zoom-src="/blog-content/boomi-trading-partner-management-connectivity-with-oftp2/boomi-trading-partner-management-connectivity-with-oftp2-start-step-conf-1.png"></figure>
+</p>
+<p><figure><img
+    class="my-0 rounded-md"
+    loading="lazy"
+    decoding="async"
+    fetchpriority="auto"
+    alt="Boomi trading partner selected in the start step configuration"
+    width="1294"
+    height="1408"
+    src="/blog-content/boomi-trading-partner-management-connectivity-with-oftp2/boomi-trading-partner-management-connectivity-with-oftp2-start-step-conf-2_hu_b84005fe4aa9577b.png"
+    srcset="/blog-content/boomi-trading-partner-management-connectivity-with-oftp2/boomi-trading-partner-management-connectivity-with-oftp2-start-step-conf-2_hu_b84005fe4aa9577b.png 800w, /blog-content/boomi-trading-partner-management-connectivity-with-oftp2/boomi-trading-partner-management-connectivity-with-oftp2-start-step-conf-2_hu_6cf8377779390101.png 1280w"
+    sizes="(min-width: 768px) 50vw, 65vw"
+    data-zoom-src="/blog-content/boomi-trading-partner-management-connectivity-with-oftp2/boomi-trading-partner-management-connectivity-with-oftp2-start-step-conf-2.png"></figure>
+</p>
+<p>Then we need to do the same thing for the customer trading partner.</p>
+<p><figure><img
+    class="my-0 rounded-md"
+    loading="lazy"
+    decoding="async"
+    fetchpriority="auto"
+    alt="Configuring the start step with the customer trading partner"
+    width="1286"
+    height="842"
+    src="/blog-content/boomi-trading-partner-management-connectivity-with-oftp2/boomi-trading-partner-management-connectivity-with-oftp2-start-step-conf-3_hu_1659449c619f4e71.png"
+    srcset="/blog-content/boomi-trading-partner-management-connectivity-with-oftp2/boomi-trading-partner-management-connectivity-with-oftp2-start-step-conf-3_hu_1659449c619f4e71.png 800w, /blog-content/boomi-trading-partner-management-connectivity-with-oftp2/boomi-trading-partner-management-connectivity-with-oftp2-start-step-conf-3_hu_9734ad040e6d3845.png 1280w"
+    sizes="(min-width: 768px) 50vw, 65vw"
+    data-zoom-src="/blog-content/boomi-trading-partner-management-connectivity-with-oftp2/boomi-trading-partner-management-connectivity-with-oftp2-start-step-conf-3.png"></figure>
+</p>
+<p><figure><img
+    class="my-0 rounded-md"
+    loading="lazy"
+    decoding="async"
+    fetchpriority="auto"
+    alt="Customer trading partner selected in the start step configuration"
+    width="1290"
+    height="964"
+    src="/blog-content/boomi-trading-partner-management-connectivity-with-oftp2/boomi-trading-partner-management-connectivity-with-oftp2-start-step-conf-4_hu_78f8e13ddcac47fd.png"
+    srcset="/blog-content/boomi-trading-partner-management-connectivity-with-oftp2/boomi-trading-partner-management-connectivity-with-oftp2-start-step-conf-4_hu_78f8e13ddcac47fd.png 800w, /blog-content/boomi-trading-partner-management-connectivity-with-oftp2/boomi-trading-partner-management-connectivity-with-oftp2-start-step-conf-4_hu_4bdf190b8acf032f.png 1280w"
+    sizes="(min-width: 768px) 50vw, 65vw"
+    data-zoom-src="/blog-content/boomi-trading-partner-management-connectivity-with-oftp2/boomi-trading-partner-management-connectivity-with-oftp2-start-step-conf-4.png"></figure>
+</p>
+<p>Then click &ldquo;OK&rdquo;. The start step is ready. You will see three options, but for now we will only use the Documents and Errors steps.</p>
+<p><figure><img
+    class="my-0 rounded-md"
+    loading="lazy"
+    decoding="async"
+    fetchpriority="auto"
+    alt="Boomi integration start step showing the Documents, Errors and third option"
+    width="1492"
+    height="1178"
+    src="/blog-content/boomi-trading-partner-management-connectivity-with-oftp2/boomi-trading-partner-management-connectivity-with-oftp2-integration-start-step_hu_ea778d8ec93b5bba.png"
+    srcset="/blog-content/boomi-trading-partner-management-connectivity-with-oftp2/boomi-trading-partner-management-connectivity-with-oftp2-integration-start-step_hu_ea778d8ec93b5bba.png 800w, /blog-content/boomi-trading-partner-management-connectivity-with-oftp2/boomi-trading-partner-management-connectivity-with-oftp2-integration-start-step_hu_da4d3d5da220b405.png 1280w"
+    sizes="(min-width: 768px) 50vw, 65vw"
+    data-zoom-src="/blog-content/boomi-trading-partner-management-connectivity-with-oftp2/boomi-trading-partner-management-connectivity-with-oftp2-integration-start-step.png"></figure>
+</p>
+<p>As I mentioned before, I&rsquo;ll use the EDI ORDERS D96A example for this integration. You can easily import an EDI profile in Boomi.</p>
+<p><figure><img
+    class="my-0 rounded-md"
+    loading="lazy"
+    decoding="async"
+    fetchpriority="auto"
+    alt="Importing an EDIFACT profile in Boomi, step 1"
+    width="1282"
+    height="488"
+    src="/blog-content/boomi-trading-partner-management-connectivity-with-oftp2/boomi-trading-partner-management-connectivity-with-oftp2-import-edifact-profile-1_hu_e388e6486d1b12ba.png"
+    srcset="/blog-content/boomi-trading-partner-management-connectivity-with-oftp2/boomi-trading-partner-management-connectivity-with-oftp2-import-edifact-profile-1_hu_e388e6486d1b12ba.png 800w, /blog-content/boomi-trading-partner-management-connectivity-with-oftp2/boomi-trading-partner-management-connectivity-with-oftp2-import-edifact-profile-1_hu_c90a0bb754f0b57d.png 1280w"
+    sizes="(min-width: 768px) 50vw, 65vw"
+    data-zoom-src="/blog-content/boomi-trading-partner-management-connectivity-with-oftp2/boomi-trading-partner-management-connectivity-with-oftp2-import-edifact-profile-1.png"></figure>
+</p>
+<p><figure><img
+    class="my-0 rounded-md"
+    loading="lazy"
+    decoding="async"
+    fetchpriority="auto"
+    alt="Importing an EDIFACT profile in Boomi, step 2"
+    width="1402"
+    height="886"
+    src="/blog-content/boomi-trading-partner-management-connectivity-with-oftp2/boomi-trading-partner-management-connectivity-with-oftp2-import-edifact-profile-2_hu_940ace1fc41b19e2.png"
+    srcset="/blog-content/boomi-trading-partner-management-connectivity-with-oftp2/boomi-trading-partner-management-connectivity-with-oftp2-import-edifact-profile-2_hu_940ace1fc41b19e2.png 800w, /blog-content/boomi-trading-partner-management-connectivity-with-oftp2/boomi-trading-partner-management-connectivity-with-oftp2-import-edifact-profile-2_hu_a7684884965b93af.png 1280w"
+    sizes="(min-width: 768px) 50vw, 65vw"
+    data-zoom-src="/blog-content/boomi-trading-partner-management-connectivity-with-oftp2/boomi-trading-partner-management-connectivity-with-oftp2-import-edifact-profile-2.png"></figure>
+</p>
+<p><figure><img
+    class="my-0 rounded-md"
+    loading="lazy"
+    decoding="async"
+    fetchpriority="auto"
+    alt="Importing an EDIFACT profile in Boomi, step 3"
+    width="1472"
+    height="1208"
+    src="/blog-content/boomi-trading-partner-management-connectivity-with-oftp2/boomi-trading-partner-management-connectivity-with-oftp2-import-edifact-profile-3_hu_e6690f2fed48e037.png"
+    srcset="/blog-content/boomi-trading-partner-management-connectivity-with-oftp2/boomi-trading-partner-management-connectivity-with-oftp2-import-edifact-profile-3_hu_e6690f2fed48e037.png 800w, /blog-content/boomi-trading-partner-management-connectivity-with-oftp2/boomi-trading-partner-management-connectivity-with-oftp2-import-edifact-profile-3_hu_3cd85dbd1273ab93.png 1280w"
+    sizes="(min-width: 768px) 50vw, 65vw"
+    data-zoom-src="/blog-content/boomi-trading-partner-management-connectivity-with-oftp2/boomi-trading-partner-management-connectivity-with-oftp2-import-edifact-profile-3.png"></figure>
+</p>
+<p>After importing, you will see the imported EDIFACT profile.</p>
+<p><figure><img
+    class="my-0 rounded-md"
+    loading="lazy"
+    decoding="async"
+    fetchpriority="auto"
+    alt="The imported ORDERS D96A EDIFACT profile in Boomi"
+    width="2446"
+    height="1620"
+    src="/blog-content/boomi-trading-partner-management-connectivity-with-oftp2/boomi-trading-partner-management-connectivity-with-oftp2-import-edifact-profile-4_hu_cfa8b4df841f4051.png"
+    srcset="/blog-content/boomi-trading-partner-management-connectivity-with-oftp2/boomi-trading-partner-management-connectivity-with-oftp2-import-edifact-profile-4_hu_cfa8b4df841f4051.png 800w, /blog-content/boomi-trading-partner-management-connectivity-with-oftp2/boomi-trading-partner-management-connectivity-with-oftp2-import-edifact-profile-4_hu_bb1221f9c387f6cc.png 1280w"
+    sizes="(min-width: 768px) 50vw, 65vw"
+    data-zoom-src="/blog-content/boomi-trading-partner-management-connectivity-with-oftp2/boomi-trading-partner-management-connectivity-with-oftp2-import-edifact-profile-4.png"></figure>
+</p>
+<p>I created really basic mapping with that profile and basic flat file profile and mapped them only with one field.</p>
+<p><figure><img
+    class="my-0 rounded-md"
+    loading="lazy"
+    decoding="async"
+    fetchpriority="auto"
+    alt="Basic map between the EDIFACT profile and a flat file profile linking a single field"
+    width="2436"
+    height="1358"
+    src="/blog-content/boomi-trading-partner-management-connectivity-with-oftp2/boomi-trading-partner-management-connectivity-with-oftp2-import-edifact-mapping_hu_471a01706343368a.png"
+    srcset="/blog-content/boomi-trading-partner-management-connectivity-with-oftp2/boomi-trading-partner-management-connectivity-with-oftp2-import-edifact-mapping_hu_471a01706343368a.png 800w, /blog-content/boomi-trading-partner-management-connectivity-with-oftp2/boomi-trading-partner-management-connectivity-with-oftp2-import-edifact-mapping_hu_b0b24fc2320a7478.png 1280w"
+    sizes="(min-width: 768px) 50vw, 65vw"
+    data-zoom-src="/blog-content/boomi-trading-partner-management-connectivity-with-oftp2/boomi-trading-partner-management-connectivity-with-oftp2-import-edifact-mapping.png"></figure>
+</p>
+<p>Then I modified the process like this. I added our map and a notify step to print the mapping output in the logs. In the exception shape, I simply print &ldquo;Error&rdquo;.</p>
+<p><figure><img
+    class="my-0 rounded-md"
+    loading="lazy"
+    decoding="async"
+    fetchpriority="auto"
+    alt="Boomi process overview with the map, notify step and exception shape"
+    width="2410"
+    height="1266"
+    src="/blog-content/boomi-trading-partner-management-connectivity-with-oftp2/boomi-trading-partner-management-connectivity-with-oftp2-process-overview_hu_79ea1044c64c1e00.png"
+    srcset="/blog-content/boomi-trading-partner-management-connectivity-with-oftp2/boomi-trading-partner-management-connectivity-with-oftp2-process-overview_hu_79ea1044c64c1e00.png 800w, /blog-content/boomi-trading-partner-management-connectivity-with-oftp2/boomi-trading-partner-management-connectivity-with-oftp2-process-overview_hu_d648d51b24930119.png 1280w"
+    sizes="(min-width: 768px) 50vw, 65vw"
+    data-zoom-src="/blog-content/boomi-trading-partner-management-connectivity-with-oftp2/boomi-trading-partner-management-connectivity-with-oftp2-process-overview.png"></figure>
+</p>
+
+<h3 class="relative group">Processing and Testing the Integration
+    <div id="processing-and-testing-the-integration" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#processing-and-testing-the-integration" aria-label="Anchor">#</a>
+    </span>
+    
+</h3>
+<p>With these configurations in place, our integration flow is completely ready. Now, let&rsquo;s deploy the process and send our sample EDIFACT data from the Mendelson OFTP2 application to Boomi.</p>
+
+<h4 class="relative group">Sample EDIFACT File (ORDERS D96A)
+    <div id="sample-edifact-file-orders-d96a" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#sample-edifact-file-orders-d96a" aria-label="Anchor">#</a>
+    </span>
+    
+</h4>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>UNA:+.? &#39;
+</span></span><span style="display:flex;"><span>UNB+UNOA:1+O2010CUSTOMER:ZZ+O1999BOOMIES:ZZ+171129:1512+999&#39;
+</span></span><span style="display:flex;"><span>UNH+1+ORDERS:D:96A:UN&#39;
+</span></span><span style="display:flex;"><span>BGM+220+PO123456+9&#39;
+</span></span><span style="display:flex;"><span>DTM+137:20171129:102&#39;
+</span></span><span style="display:flex;"><span>DTM+63:20171201:102&#39;
+</span></span><span style="display:flex;"><span>DTM+64:20171231:102&#39;
+</span></span><span style="display:flex;"><span>RFF+CR:ABC&#39;
+</span></span><span style="display:flex;"><span>NAD+BY+1234567890123::9&#39;
+</span></span><span style="display:flex;"><span>NAD+SU+9876543210987::9&#39;
+</span></span><span style="display:flex;"><span>NAD+DP+4567890123456::9&#39;
+</span></span><span style="display:flex;"><span>NAD+IV+1230984569876::9++COMPANY+MAIN STREET 1+GERMANY+++DE&#39;
+</span></span><span style="display:flex;"><span>RFF+VA:DE1234567890&#39;
+</span></span><span style="display:flex;"><span>CUX+2:EUR:9&#39;
+</span></span><span style="display:flex;"><span>LIN+1++4123456789012:EN&#39;
+</span></span><span style="display:flex;"><span>QTY+21:10&#39;
+</span></span><span style="display:flex;"><span>PRI+AAA:9.99&#39;
+</span></span><span style="display:flex;"><span>LIN+2++4234567890123:EN&#39;
+</span></span><span style="display:flex;"><span>QTY+21:5&#39;
+</span></span><span style="display:flex;"><span>PRI+AAA:6.66&#39;
+</span></span><span style="display:flex;"><span>UNS+S&#39;
+</span></span><span style="display:flex;"><span>CNT+2:15&#39;
+</span></span><span style="display:flex;"><span>UNT+21+1&#39;
+</span></span><span style="display:flex;"><span>UNZ+1+999&#39;</span></span></code></pre></div></div>
+<p>Trigger the transmission within the Mendelson application to send the file to your local Boomi Atom.</p>
+<p><figure><img
+    class="my-0 rounded-md"
+    loading="lazy"
+    decoding="async"
+    fetchpriority="auto"
+    alt="Sending the sample EDIFACT file from the Mendelson OFTP2 application to the Boomi Atom"
+    width="2038"
+    height="1372"
+    src="/blog-content/boomi-trading-partner-management-connectivity-with-oftp2/boomi-trading-partner-management-connectivity-with-oftp2-mendelson-test_hu_16650e4f8dc20e57.png"
+    srcset="/blog-content/boomi-trading-partner-management-connectivity-with-oftp2/boomi-trading-partner-management-connectivity-with-oftp2-mendelson-test_hu_16650e4f8dc20e57.png 800w, /blog-content/boomi-trading-partner-management-connectivity-with-oftp2/boomi-trading-partner-management-connectivity-with-oftp2-mendelson-test_hu_9379e8d46d295020.png 1280w"
+    sizes="(min-width: 768px) 50vw, 65vw"
+    data-zoom-src="/blog-content/boomi-trading-partner-management-connectivity-with-oftp2/boomi-trading-partner-management-connectivity-with-oftp2-mendelson-test.png"></figure>
+</p>
+
+<h4 class="relative group">Execution Results
+    <div id="execution-results" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#execution-results" aria-label="Anchor">#</a>
+    </span>
+    
+</h4>
+<p>Once the EDIFACT file is successfully transmitted, you will see a successful execution template inside Boomi Process Reporting.</p>
+<p><figure><img
+    class="my-0 rounded-md"
+    loading="lazy"
+    decoding="async"
+    fetchpriority="auto"
+    alt="Successful process execution shown in Boomi Process Reporting"
+    width="2740"
+    height="454"
+    src="/blog-content/boomi-trading-partner-management-connectivity-with-oftp2/boomi-trading-partner-management-connectivity-with-oftp2-process-reporting_hu_8cd939404d68d8b9.png"
+    srcset="/blog-content/boomi-trading-partner-management-connectivity-with-oftp2/boomi-trading-partner-management-connectivity-with-oftp2-process-reporting_hu_8cd939404d68d8b9.png 800w, /blog-content/boomi-trading-partner-management-connectivity-with-oftp2/boomi-trading-partner-management-connectivity-with-oftp2-process-reporting_hu_47595f13d65b7a95.png 1280w"
+    sizes="(min-width: 768px) 50vw, 65vw"
+    data-zoom-src="/blog-content/boomi-trading-partner-management-connectivity-with-oftp2/boomi-trading-partner-management-connectivity-with-oftp2-process-reporting.png"></figure>
+</p>
+<p>Additionally, if you navigate to Trading Partner Management Reporting, you can track the metadata, interchange details, and specific inbound/outbound statuses of your EDI transaction.</p>
+<p><figure><img
+    class="my-0 rounded-md"
+    loading="lazy"
+    decoding="async"
+    fetchpriority="auto"
+    alt="Trading Partner Management Reporting showing interchange metadata and inbound/outbound status"
+    width="3420"
+    height="798"
+    src="/blog-content/boomi-trading-partner-management-connectivity-with-oftp2/boomi-trading-partner-management-connectivity-with-oftp2-trading-partner-reporting_hu_7beadc756dd474a6.png"
+    srcset="/blog-content/boomi-trading-partner-management-connectivity-with-oftp2/boomi-trading-partner-management-connectivity-with-oftp2-trading-partner-reporting_hu_7beadc756dd474a6.png 800w, /blog-content/boomi-trading-partner-management-connectivity-with-oftp2/boomi-trading-partner-management-connectivity-with-oftp2-trading-partner-reporting_hu_6eba42d70ec1f4b0.png 1280w"
+    sizes="(min-width: 768px) 50vw, 65vw"
+    data-zoom-src="/blog-content/boomi-trading-partner-management-connectivity-with-oftp2/boomi-trading-partner-management-connectivity-with-oftp2-trading-partner-reporting.png"></figure>
+</p>
+
+<h3 class="relative group">Conclusion
+    <div id="conclusion" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#conclusion" aria-label="Anchor">#</a>
+    </span>
+    
+</h3>
+<p>Setting up B2B integrations in the automotive supply chain doesn&rsquo;t have to be a multi-week headache of scattered property files and custom scripting. By coupling Boomi’s Trading Partner Management (TPM) framework with native OFTP2 handling, you centralize security certificates, communication configurations, and EDIFACT routing rules into a single, scalable dashboard.</p>
+<p>While minor environment hurdles like missing cryptography libraries (BouncyCastle) or strict character limits on OFTP2 passwords can trip you up initially, resolving them at the infrastructure layer sets up a smooth environment for your enterprise. Once your baseline configuration is locked in, onboarding your next twenty trading partners follows the exact same structured pattern—allowing you to focus on business logic rather than connectivity troubleshooting.</p>
+<p>If you have questions about configuring specific EDIFACT message versions or handling advanced certificate handshakes within Boomi TPM, feel free to drop a comment below or reach out!</p>
+
+          
+          
+          
+        </div>
+        
+        
+
+        
+
+        
+
+      </div>
+    </section>
+
+    
+    <footer class="pt-8 max-w-prose print:hidden">
+      
+  
+    
+    
+    
+    <div class="pt-8">
+      <hr class="border-dotted border-neutral-300 dark:border-neutral-600">
+      <div class="flex justify-between pt-3">
+        <span class="flex flex-col">
+          
+            <a
+              class="flex text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
+              href="/blog/salesforce-bulkapi2-integration-with-apache-camel/">
+              <span class="leading-6">
+                <span class="inline-block rtl:rotate-180">&larr;</span>&ensp;Salesforce Bulk API 2.0 Integration with Apache Camel
+              </span>
+            </a>
+            
+              <span class="ms-6 mt-1 text-xs text-neutral-500 dark:text-neutral-400">
+                <time datetime="2026-03-04T22:58:00&#43;01:00">March 4, 2026</time>
+              </span>
+            
+          
+        </span>
+        <span class="flex flex-col items-end">
+          
+        </span>
+      </div>
+    </div>
+  
+
+
+      
+    </footer>
+  </article>
+
+        
+
+
+  
+
+
+
+
+
+
+<div
+  id="scroll-to-top"
+  class="fixed bottom-6 end-6 z-50 transform translate-y-4 opacity-0 duration-200">
+  <a
+    href="#the-top"
+    class="pointer-events-auto flex h-12 w-12 items-center justify-center rounded-full bg-neutral/50 text-xl text-neutral-700 hover:text-primary-600 dark:bg-neutral-800/50 dark:text-neutral dark:hover:text-primary-400"
+    aria-label="Scroll to top"
+    title="Scroll to top">
+    &uarr;
+  </a>
+</div>
+
+      </main><footer id="site-footer" class="py-10 print:hidden">
+  
+  
+    
+  
+  <div class="flex items-center justify-between">
+    
+    
+      <p class="text-sm text-neutral-500 dark:text-neutral-400">
+          &copy;
+          2026
+          
+      </p>
+    
+
+    
+    
+      <p class="text-xs text-neutral-500 dark:text-neutral-400">
+        
+        
+        Powered by <a class="hover:underline hover:decoration-primary-400 hover:text-primary-500"
+          href="https://gohugo.io/" target="_blank" rel="noopener noreferrer">Hugo</a> &amp; <a class="hover:underline hover:decoration-primary-400 hover:text-primary-500"
+          href="https://blowfish.page/" target="_blank" rel="noopener noreferrer">Blowfish</a>
+      </p>
+    
+  </div>
+  
+    <script>
+      mediumZoom(document.querySelectorAll("img:not(.nozoom)"), {
+        margin: 24,
+        background: "rgba(0,0,0,0.5)",
+        scrollOffset: 0,
+      });
+    </script>
+  
+  
+  
+</footer>
+<div
+  id="search-wrapper"
+  class="invisible fixed inset-0 flex h-screen w-screen cursor-default flex-col bg-neutral-500/50 p-4 backdrop-blur-sm dark:bg-neutral-900/50 sm:p-6 md:p-[10vh] lg:p-[12vh] z-500"
+  data-url="https://sedatgoc.com/">
+  <div
+    id="search-modal"
+    class="flex flex-col w-full max-w-3xl min-h-0 mx-auto border rounded-md shadow-lg top-20 border-neutral-200 bg-neutral dark:border-neutral-700 dark:bg-neutral-800">
+    <header class="relative z-10 flex items-center justify-between flex-none px-2">
+      <form class="flex items-center flex-auto min-w-0">
+        <div class="flex items-center justify-center w-8 h-8 text-neutral-400">
+          <span class="relative block icon"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+</span>
+        </div>
+        <input
+          type="search"
+          id="search-query"
+          class="flex flex-auto h-12 mx-1 bg-transparent appearance-none focus:outline-dotted focus:outline-2 focus:outline-transparent"
+          placeholder="Search"
+          tabindex="0">
+      </form>
+      <button
+        id="close-search-button"
+        class="flex items-center justify-center w-8 h-8 text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
+        title="Close (Esc)">
+        <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path fill="currentColor" d="M310.6 361.4c12.5 12.5 12.5 32.75 0 45.25C304.4 412.9 296.2 416 288 416s-16.38-3.125-22.62-9.375L160 301.3L54.63 406.6C48.38 412.9 40.19 416 32 416S15.63 412.9 9.375 406.6c-12.5-12.5-12.5-32.75 0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-105.4 105.4L310.6 361.4z"/></svg>
+</span>
+      </button>
+    </header>
+    <section class="flex-auto px-2 overflow-auto">
+      <ul id="search-results">
+        
+      </ul>
+    </section>
+  </div>
+</div>
+
+    </div>
+  </body>
+  
+</html>
